@@ -4,7 +4,7 @@ import React, { useContext } from 'react'
 import './account.scss'
 
 const Account_Page = () => {
-
+    // FIXME: user must be from contex 
     const user = {
         email: 'example@gmail.com',
         name: 'USER'
