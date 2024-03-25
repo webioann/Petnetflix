@@ -13,7 +13,7 @@ const LoginWithEmail_authButton: React.FC<IAuthButtonProps> = ({ email, password
         try {
             // "classic" authentication with email and password with turning at Home page
             await signInWithEmailAndPassword(auth, email, password)
-            router.push('/')
+            router.push('/browse')
         }
         catch(error){
             setWarning(true)

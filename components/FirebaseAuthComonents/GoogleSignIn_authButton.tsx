@@ -13,7 +13,7 @@ const GoogleSignIn_authButton = () => {
         try {
             // typical Google authentication with used popup
             await signInWithPopup(auth, provider)
-            router.push('/')
+            router.push('/browse')
         }
         catch(error) {console.error(error)} 
     }

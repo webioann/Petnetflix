@@ -8,3 +8,32 @@
         display: block;
     }
 }
+.g-link {
+    color: $light;
+    transition: transform 300ms linear;
+    &:hover {
+        font-weight: 700;
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+}
+
+.bell-wrapper {
+    position: relative;
+    .message-count {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: $netflix-red;
+        font-size: 12px;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+

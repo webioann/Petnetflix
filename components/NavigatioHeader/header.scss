@@ -1,0 +1,42 @@
+@import '../../app/global.scss';
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    .nav-container{
+        width: 100%;
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100%;
+        position: relative;
+        .navbar-wrapper {
+            height: $header-hight;
+            max-width: 1600px;
+            gap: 1rem;
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+        }
+    
+    }
+}
+.nav-black {
+    background-color: $nav-black;
+    transition: background-color 400ms linear;
+}
+.nav-faded {
+    background-color: transparent;
+    transition: background-color 400ms linear;
+    background-image: linear-gradient(
+        180deg,
+        $netflix-black,
+        rgba(37, 37, 37, 0.61),
+        transparent
+    );
+}

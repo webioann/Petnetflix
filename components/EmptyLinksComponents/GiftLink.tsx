@@ -6,7 +6,7 @@ import './fake-links.scss'
 const GiftLink = () => {
     // mock link button
     return (
-        <Link href={'/gifts'} className='fake-link'>
+        <Link href={'#'} className='fake-link'>
             <BiGift  size={16} color='#fff'/>
         </Link>
     )

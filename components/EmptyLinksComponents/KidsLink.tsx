@@ -8,7 +8,7 @@ const KidsLink = () => {
         <Link 
             className='g-link fake-link' 
             style={{fontWeight: 400, fontSize: '0.8em'}}
-            href={'/kids'}>
+            href={'#'}>
                 KIDS
         </Link>
     )

@@ -15,7 +15,7 @@ const SignOut_authButton = () => {
         // just sign out from account and return at Home
         try {
             await signOut(auth)
-            router.push('/')
+            router.push('/browse')
         }
         catch(error) {console.log(error)}
     }

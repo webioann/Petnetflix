@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { IMovie } from '../../types/movies.types'
 import { GoSearch } from 'react-icons/go'
 import { IoClose } from 'react-icons/io5'
-import '../style/search-bar.scss'
+import './search-bar.scss'
 
 const SearchBar = () => {
 
@@ -38,7 +38,7 @@ const SearchBar = () => {
             setRenderThisComponent(false)
         }
         else { setRenderThisComponent(true) }
-    }, [location.pathname])
+    }, [])
 
     const onClickSearchIcon = () => {
         if( value.length == 0 ) {
