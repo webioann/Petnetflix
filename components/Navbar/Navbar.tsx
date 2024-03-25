@@ -3,14 +3,11 @@ import React, { useContext } from 'react'
 import SignOut_authButton from '../FirebaseAuthComonents/SignOut_authButton'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { UserContext } from '@/context/UserContext'
 import './navbar.scss'
 
 function Navbar() {
 
     const router = useRouter()
-    const user = useContext(UserContext)
-    console.log('USER ---> ', user)
 
     // const postData = {
     //     text: 'Hello Jozzy',
@@ -33,7 +30,7 @@ function Navbar() {
 
     return (
         <div>Navbar
-            user && <SignOut_authButton/>
+            <SignOut_authButton/>
             <Link href={'/signup'}>Sign Up</Link>
             <Link href={'/login'}>Log in</Link>
             <Link href={'/api/auth/signin'}>SIGNIN</Link>
