@@ -1,0 +1,10 @@
+@import '../../app/global.scss';
+
+.fake-link{
+    display: none;
+}
+@media (min-width: $sm) {
+    .fake-link{
+        display: block;
+    }
+}
