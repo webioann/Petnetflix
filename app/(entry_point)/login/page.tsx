@@ -8,7 +8,7 @@ function LoginPage() {
     return (
         <section className={styles.register_page}>
             <h1 className={styles.auth_header}>Login</h1>
-            <RegistrationForm type='login'/>
+            <RegistrationForm variant='login'/>
             <div className={styles.question}>
                 <p className={styles.question_text}>New to Netflix?</p>
                 <Link href="/signup" className={`${styles.question_link} ${styles.link}`}>Sign up now.</Link> 

@@ -1,8 +1,9 @@
 'use client'
 import React from 'react'
-// import { useSession, signOut } from 'next-auth/react'
+import SignOut_authButton from '../FirebaseAuthComonents/SignOut_authButton'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+// import { useSession } from 'next-'
 import './navbar.scss'
 
 function Navbar() {
@@ -32,7 +33,7 @@ function Navbar() {
 
     return (
         <div>Navbar
-            {/* {auth ? <Link href='#' onClick={() => signOut({callbackUrl: '/'})}>SIGNOUT</Link> : null} */}
+            <SignOut_authButton/>
             <Link href={'/signup'}>Sign Up</Link>
             <Link href={'/login'}>Log in</Link>
             <Link href={'/api/auth/signin'}>SIGNIN</Link>

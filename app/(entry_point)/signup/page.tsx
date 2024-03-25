@@ -7,7 +7,7 @@ function SignupPage() {
     return (
         <section className={styles.register_page}>
             <h1 className={styles.auth_header}>Sign up</h1>
-            <RegistrationForm type='signup'/>
+            <RegistrationForm variant='signup'/>
             <div className={styles.question}>
                 <p className={styles.question_text}>Already have an account ?</p>
                 <Link href="/login" className={`${styles.question_link} ${styles.link}`}>Login now.</Link> 
