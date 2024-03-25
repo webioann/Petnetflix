@@ -8,10 +8,10 @@ import KidsLink from '@/components/EmptyLinksComponents/KidsLink'
 import GiftLink from '@/components/EmptyLinksComponents/GiftLink'
 import MessageBell from '@/components/EmptyLinksComponents/MessageBell'
 import UserProfiles from '@/components/UserProfile/UserProfiles'
-import  './brows.scss'
+import  './browse.scss'
 import image from '../../public/login_background.jpg'
 
-async function BrowseLayout ({ children }: {children: ReactNode}) {
+async function BrowseLayout ({ children }: { children: ReactNode }) {
     // const session = await getServerSession(authOptions)
     // if (session) redirect("/");
     return (
@@ -32,10 +32,10 @@ async function BrowseLayout ({ children }: {children: ReactNode}) {
                     priority 
                     fill
                 />
-                {children}
-
+            {children}
         </main>
     )
 }
 
 export default BrowseLayout;
+

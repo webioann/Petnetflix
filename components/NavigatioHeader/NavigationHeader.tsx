@@ -2,6 +2,7 @@
 import React, { useState, useEffect, ReactNode } from 'react'
 import './header.scss'
 
+
 const NavigationHeader = ({ children }: {children: ReactNode}) => {
 
     const [fadedNavbar, setFadedNavbar] = useState(true)
