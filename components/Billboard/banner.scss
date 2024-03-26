@@ -1,0 +1,164 @@
+@import '../../app/global.scss';
+
+.banner-container {
+    width: 100%;
+    height: 50vh;
+    background-position: center top;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    .black-box{
+        width: 30%;
+        height: 100%;
+        background-color: $netflix-black;
+    }
+    .banner-content {
+        height: 100%;
+        width: 100%;
+        padding: 1rem 1rem 2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        z-index: 10;
+        .banner-overview {
+            padding-top: 2rem;
+            font-size: 18px;
+            line-height: 1.5;
+            font-weight: 400;
+        }
+        .red-overview{
+            color: red;
+        }
+        .banner-buttons-row {
+            display: flex;
+            gap: 0.5rem;
+            padding-top: 1rem;
+            z-index: 5;
+            .square-button {
+                background-color: $black-glass;
+                font-weight: 400;
+                padding: 0.5rem 1.5rem;
+                display: flex;
+                max-width: 10rem;
+                justify-content: center;
+                gap: 0.5rem;
+                align-items: center;
+                border-radius: $br-main;
+                color: $light;
+                position: relative;
+                &:hover {
+                    cursor: pointer;
+                }
+                .more-info-button-text {
+                    display: none;
+                }
+                @media (min-width: $xs) {
+                    .more-info-button-text {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    .black-fog {
+        height: 8rem;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        background-image: linear-gradient(
+            180deg,
+            transparent,
+            rgba(37, 37, 37, 0.61),
+            $netflix-black
+        );
+    }
+}
+@media (min-width: $sm) {
+    .banner-container {
+        height: 55vh;
+        .banner-content {
+            width: 70%;
+            padding-bottom: 3rem;
+            .banner-movie-name {
+                font-size: 46px;
+                padding-right: 30%;
+            }
+            .banner-overview {
+                padding-right: 30%;
+            }
+            .banner-buttons-row {
+                gap: 1.5rem;
+                .baner-button {
+                    padding: 0.5rem 1.5rem;
+                }
+            }
+        }
+    }
+}
+@media (min-width: $md) {
+    .banner-container {
+        height: 65vh;
+        .banner-content {
+            padding-bottom: 4rem;
+            .banner-movie-name {
+                font-size: 56px;
+                padding-right: 50%;
+            }
+            .banner-overview {
+                padding-right: 50%;
+            }
+        }
+    }
+}
+@media (min-width: $lg) {
+    .banner-container {
+        height: 70vh;
+        .banner-content {
+            padding-bottom: 5rem;
+            .banner-movie-name {
+                font-size: 66px;
+            }
+        }
+    }
+}
+@media (min-width: $xl) {
+    .banner-container {
+        height: 75vh;
+        .banner-content {
+            padding-bottom: 6rem;
+            .banner-movie-name {
+                font-size: 76px;
+            }
+        }
+    }
+}
+// .circle-button {
+//     width: 40px;
+//     height: 40px;
+//     border-radius: 50%;
+//     border: 1px solid white;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background-color: $black-glass;
+//     cursor: pointer;
+// }
+
+    // .left-fog{
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     bottom: 0;
+    //     z-index: 2;
+    //     height: 100%;
+    //     width: 400px;
+    //     background-image: linear-gradient(
+    //         270deg,
+    //         transparent,
+    //         rgba(37, 37, 37, 0.61),
+    //         $netflix-black
+    //     );
+
+    // }

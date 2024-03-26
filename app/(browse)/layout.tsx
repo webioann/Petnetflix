@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import { ReactNode } from 'react'
 import Image from 'next/image'
 import NavigationHeader from '@/components/NavigatioHeader/NavigationHeader'
 import NetflixLogo from '@/components/NetflixLogo/NetflixLogo'

@@ -1,8 +1,11 @@
-
+import Billboard from "@/components/Billboard/Billboard";
 function BrowsePage() {
 
     return (
-        <div style={{color: 'red', fontSize: '50px', zIndex: 20}}>BROWSE PAGE</div>
+        <section >
+            <h1>BROWSE PAGE</h1>
+            <Billboard/>
+        </section>
     )
 }
 
