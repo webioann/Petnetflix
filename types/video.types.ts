@@ -1,5 +1,5 @@
 export interface IVideoParams {
-    media_type: 'movie' | 'tv' ;
+    media_type: 'movie' | 'tv' | 'all' ;
     movie_id: number
 }
 export interface IVideo {

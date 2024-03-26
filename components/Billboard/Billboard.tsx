@@ -2,7 +2,11 @@ import fetchBillboardData from "@/lib/fetchBillboardData"
 import Image from "next/image"
 import type { TrendingResponse, Response } from '@/types/trending.types'
 import type { Media_Type } from '@/types/app.types'
-import Container from "../Container/Container";
+import Container from "../Container/Container"
+import { MdInfoOutline } from 'react-icons/md'
+import Button_MoreInfo from "../ButtonsComponents/Button_MoreInfo"
+import Button_PlayVideo from "../ButtonsComponents/Button_PlayVideo"
+import Button_SaveInMyList from "../ButtonsComponents/Button_SaveInMyList"
 import { genres_list } from '../../data/allGenresList' 
 import './billboard.scss'
 
@@ -35,9 +39,9 @@ async function Biilboard({media_type}: {media_type: Media_Type}) {
                         ))}
                     </ul>
                     <div className="banner-buttons-row">
-                        {/* <Button_PlayVideo title='Play' videoParam={{movie_id: movie.id, media_type: media}} variant='square'/>
-                        <Button_SaveInMyList title='My List' movie={movie} />
-                        <Button_MoreInfo/> */}
+                        <Button_PlayVideo title='Play' videoParam={{movie_id: data.id, media_type: media_type}} variant='square'/>
+                        <Button_SaveInMyList title='My List' movie={data} />
+                        <Button_MoreInfo/>
                         <div className="spring-div" style={{ flex: 1 }}/> 
                     </div>
                 </div>

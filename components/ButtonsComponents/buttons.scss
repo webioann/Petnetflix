@@ -1,0 +1,69 @@
+@import '../../app/global.scss';
+
+.circle-button {
+    border-radius: 50%;
+    border: 1px solid $less-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $black-glass;
+    &:hover {
+        border: 1px solid $light;
+        cursor: pointer;
+    }
+}
+.big-circle{
+    width: 30px;
+    height: 30px;
+    padding-left: 3px;
+}
+.small-circle{
+    width: 20px;
+    height: 20px;
+}
+.mega-circle{
+    width: 50px;
+    height: 50px;
+    padding-left: 5px;
+}
+.square-button {
+    background-color: $black-glass;
+    font-weight: 400;
+    padding: 0.5rem 1.5rem;
+    display: flex;
+    max-width: 10rem;
+    justify-content: center;
+    gap: 0.5rem;
+    align-items: center;
+    border-radius: $br-main;
+    color: $light;
+    position: relative;
+    &:hover {
+        cursor: pointer;
+    }
+}
+.more-info-button-text {
+    display: none;
+}
+@media (min-width: $xs) {
+    .more-info-button-text {
+        display: block;
+    }
+}
+.close-button {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    background-color: transparent;
+    .close-icon-box {
+        border-radius: 50%;
+        background-color: inherit;
+        padding: 5px;
+        overflow: hidden;
+        transition: all 0.3 linear;
+        &:hover {
+            background-color: $black-glass;
+            cursor: pointer;
+        }
+    }
+}
