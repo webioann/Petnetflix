@@ -1,13 +1,15 @@
 import type { IVideoDataResponse, IVideosData } from "@/types/video.types"
+import { Media_Type } from '../types/video.types';
 
 type VideoParams = {
     media_type: 'movie' | 'tv'
     movie_id: number 
 }
 
-export default async function getTrailerVideoURL({media_type, movie_id}: VideoParams) {
 
-    const serverResponse = await fetch(`https://api.themoviedb.org/3/${media_type}/${movie_id}/videos&language=en-US`, {
+export default async function getTrailerVideoURL(media_type: Media_Type, movie_id: number) {
+
+    const serverResponse = await fetch(`https://api.themoviedb.org/3/${media_type}/${movie_id}/videos?language=en-US`, {
         method: 'GET',
         headers: {
             accept: 'application/json',

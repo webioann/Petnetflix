@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { Lato } from 'next/font/google'
 import type { Metadata } from 'next'
 import UserContextProvider from '@/context/UserContext'
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     description: 'description for metadata',
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: React.ReactNode}) {
     return (
         <html lang="en" className={lato.className}>
             <body>
