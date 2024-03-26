@@ -3,8 +3,7 @@ function BrowsePage() {
 
     return (
         <section >
-            <h1>BROWSE PAGE</h1>
-            <Billboard/>
+            <Billboard media_type="all"/>
         </section>
     )
 }

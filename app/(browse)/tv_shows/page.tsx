@@ -1,8 +1,11 @@
+import Billboard from "@/components/Billboard/Billboard";
 
 function TVShowsPage() {
 
     return (
-        <div style={{color: 'red', fontSize: '50px', zIndex: 20}}>TV SHOWS</div>
+        <div>
+            <Billboard media_type="tv"/>
+        </div>
     )
 }
 
