@@ -1,0 +1,11 @@
+@import '../../global.scss';
+
+.watch-page{
+    width: 100%;
+    min-height: 100vh;
+    background-color: $netflix-black;
+    color: $light;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

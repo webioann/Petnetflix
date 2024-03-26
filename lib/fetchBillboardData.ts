@@ -1,8 +1,7 @@
 import type { TrendingResponse, Response } from '@/types/trending.types'
-import type { Media_Type } from '@/types/app.types'
+import type { Full_Media_Types } from '@/types/trending.types'
 
-
-export default async function fetchBillboardData(media_type: Media_Type) {
+export default async function fetchBillboardData(media_type: Full_Media_Types) {
 
     const serverResponse = await fetch(`https://api.themoviedb.org/3/trending/${media_type}/week?language=en-US&page=1`, {
         method: 'GET',

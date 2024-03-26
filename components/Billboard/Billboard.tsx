@@ -1,7 +1,7 @@
 import fetchBillboardData from "@/lib/fetchBillboardData"
 import Image from "next/image"
 import type { TrendingResponse, Response } from '@/types/trending.types'
-import type { Media_Type } from '@/types/app.types'
+import type { Full_Media_Types } from '@/types/trending.types'
 import Container from "../Container/Container"
 import { MdInfoOutline } from 'react-icons/md'
 import Button_MoreInfo from "../ButtonsComponents/Button_MoreInfo"
@@ -10,10 +10,10 @@ import Button_SaveInMyList from "../ButtonsComponents/Button_SaveInMyList"
 import { genres_list } from '../../data/allGenresList' 
 import './billboard.scss'
 
-async function Biilboard({media_type}: {media_type: Media_Type}) {
+async function Biilboard({media_type}: {media_type: Full_Media_Types}) {
 
     const data = await fetchBillboardData(media_type)
-    // console.log('DATA NUMBER 22--> ', data)
+    console.log('DATA NUMBER 22--> ', data.id, data.media_type)
 
     return (
         <section className='banner-container'>
@@ -39,7 +39,7 @@ async function Biilboard({media_type}: {media_type: Media_Type}) {
                         ))}
                     </ul>
                     <div className="banner-buttons-row">
-                        <Button_PlayVideo videoParam={{movie_id: data.id, media_type: media_type}} variant='square'/>
+                        <Button_PlayVideo media_type={data.media_type} movie_id={data.id} variant='square'/>
                         <Button_SaveInMyList title='My List' movie={data} />
                         <Button_MoreInfo/>
                         <div className="spring-div" style={{ flex: 1 }}/> 

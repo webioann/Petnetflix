@@ -1,21 +1,18 @@
-export interface IVideoParams {
-    media_type: 'movie' | 'tv' | 'all' ;
-    movie_id: number
-}
-export interface IVideo {
-    id: string
+export type Media_Type = 'tv' | 'movie'
+
+export interface IVideosData {
     iso_639_1: string
     iso_3166_1: string
-    key: string
     name: string
-    official: boolean
-    published_at: string
+    key: string
     site: string
     size: number
     type: string
+    official: boolean
+    published_at: string
+    id: string
 }
-
 export interface IVideoDataResponse {
     id: number
-    results: IVideo[]
+    results: IVideosData[]
 }
