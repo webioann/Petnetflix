@@ -6,11 +6,11 @@
     background-position: center top;
     position: relative;
     z-index: 10;
-    .black-box{
-        width: 30%;
-        height: 100%;
-        background-color: $netflix-black;
-    }
+    // .black-box{
+    //     width: 30%;
+    //     height: 100%;
+    //     background-color: $netflix-black;
+    // }
     .banner-content {
         height: 100%;
         width: 100%;
@@ -29,6 +29,24 @@
             font-size: 18px;
             line-height: 1.5;
             font-weight: 400;
+        }
+        // genres row list
+        .genres-list-row{
+            display: flex;
+            gap: 10px;
+            font-size: 1rem;
+            padding-top: 0.5rem;
+            .genre-item{
+                display: flex;
+                align-items: center;
+                .dot{
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                    background-color: rgba(255, 255, 255, 0.2);
+                    margin-right: 8px;
+                }
+            }
         }
         .banner-buttons-row {
             display: flex;
@@ -62,7 +80,7 @@
         }
     }
     .black-fog {
-        height: 8rem;
+        height: 4rem;
         position: absolute;
         bottom: 0;
         left: 0;
@@ -80,14 +98,10 @@
     .banner-container {
         height: 55vh;
         .banner-content {
-            width: 70%;
+            width: 80%;
             padding-bottom: 3rem;
             .movie-name {
                 font-size: 46px;
-                padding-right: 30%;
-            }
-            .movie-overview {
-                padding-right: 30%;
             }
             .banner-buttons-row {
                 gap: 1.5rem;
@@ -96,20 +110,27 @@
                 }
             }
         }
+        .black-fog{
+            height: 5rem;
+        }
     }
 }
 @media (min-width: $md) {
     .banner-container {
         height: 65vh;
         .banner-content {
+            width: 90%;
             padding-bottom: 4rem;
             .movie-name {
                 font-size: 56px;
-                padding-right: 50%;
+                padding-right: 20%;
             }
             .movie-overview {
-                padding-right: 50%;
+                padding-right: 20%;
             }
+        }
+        .black-fog{
+            height: 6rem;
         }
     }
 }
@@ -117,10 +138,14 @@
     .banner-container {
         height: 70vh;
         .banner-content {
+            width: 70%;
             padding-bottom: 5rem;
             .movie-name {
                 font-size: 66px;
             }
+        }
+        .black-fog{
+            height: 7rem;
         }
     }
 }
@@ -132,6 +157,9 @@
             .movie-name {
                 font-size: 76px;
             }
+        }
+        .black-fog{
+            height: 8rem;
         }
     }
 }
