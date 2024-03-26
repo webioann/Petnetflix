@@ -1,11 +1,8 @@
-import React from 'react'
+'use server'
+import { redirect } from 'next/navigation'
 
-function HomePage() {
-    return (
-        <>
-            <h1>HOME PAGE</h1>
-        </>
-    )
+async function HomePage() {
+    redirect(`/browse`) // Navigate to the Browse page
 }
 
-export default HomePage
+export default HomePage;

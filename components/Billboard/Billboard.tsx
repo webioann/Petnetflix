@@ -39,7 +39,7 @@ async function Biilboard({media_type}: {media_type: Media_Type}) {
                         ))}
                     </ul>
                     <div className="banner-buttons-row">
-                        <Button_PlayVideo title='Play' videoParam={{movie_id: data.id, media_type: media_type}} variant='square'/>
+                        <Button_PlayVideo videoParam={{movie_id: data.id, media_type: media_type}} variant='square'/>
                         <Button_SaveInMyList title='My List' movie={data} />
                         <Button_MoreInfo/>
                         <div className="spring-div" style={{ flex: 1 }}/> 
