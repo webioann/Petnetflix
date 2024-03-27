@@ -2,6 +2,7 @@
 export const netflixPageQueries = {
     originals:  `/discover/tv?api_key=${process.env.TMDB_API_KEY}&with_networks=213`,
     trendingNow: `/trending/all/week?api_key=${process.env.TMDB_API_KEY}&language=en-US`,
+    
     kids: `/discover/tv?api_key=${process.env.TMDB_API_KEY}&with_genres=10762`,
     dramas: `/discover/tv?api_key=${process.env.TMDB_API_KEY}&with_genres=18`,
 };
