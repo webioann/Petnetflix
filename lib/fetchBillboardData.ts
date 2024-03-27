@@ -13,12 +13,13 @@ export default async function fetchBillboardData(media_type: Full_Media_Types) {
         }
     })
     if(!serverResponse.ok) throw new Error('Failed to fetch data for Billboard')
+    // fetch only one random results
     let result: Promise<TrendingResponse> = serverResponse.json()
     const results = (await result).results
     const resultsLength = results.length
     let randomIndex = Math.floor(Math.random() *  resultsLength)
     const filtered = results.filter((item, index) => index == randomIndex)
     const oneRandomMovie = filtered[0]
+
     return oneRandomMovie
 };
-// ?api_key=${process.env.TMDB_API_KEY}
