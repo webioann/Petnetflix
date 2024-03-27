@@ -2,6 +2,7 @@
 import React, { useContext } from 'react'
 import { UserContext } from '../../context/UserContext'
 import { USER_AVATAR } from '../../data/constants'
+import Image from "next/image"
 
 type userAvatarProps = {
     size: number
@@ -13,7 +14,7 @@ const UserAvatar: React.FC<userAvatarProps> = ({ size, radius }) => {
     const { user } = useContext(UserContext)
 
     return (
-        <img 
+        <Image 
             style={{
                 width: `${size}px`,
                 height: `${size}px`,
