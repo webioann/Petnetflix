@@ -7,7 +7,7 @@ import './movies-slider.scss'
 async function TrendingMoviesSlider() {
 
     const movies = await fetchTrendingMoviesAndTvshows('all')
-    console.log('MOVIES ----> ', movies)
+    // console.log('MOVIES ----> ', movies)
 
     return (
         <section className='slider-container'>

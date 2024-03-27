@@ -35,13 +35,13 @@ export interface ITvshow {
     origin_country: string[];
 }
 
-export type Response = 
+export type MovieOrTvshowType = 
     | IMovie
     | ITvshow
 
 export interface TrendingResponse {
     page: number
-    results: Response[]
+    results: MovieOrTvshowType[]
     total_pages: number
     total_results: number
 }

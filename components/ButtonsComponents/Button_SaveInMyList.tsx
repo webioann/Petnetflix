@@ -5,16 +5,16 @@ import { AiOutlinePlus, AiOutlineCheck } from 'react-icons/ai'
 import { db } from '../../firebase.config'
 import { doc, setDoc } from 'firebase/firestore'
 // import { IMovie } from '../../types/movies.types'
-import type { TrendingResponse, Response } from '@/types/trending.types'
+import type { TrendingResponse, MovieOrTvshowType } from '@/types/trending.types'
 
 import './buttons.scss'
 
 interface ISaveMovieInMyList {
-    movie: Response
+    movie: MovieOrTvshowType
     title?: string
 }
 interface IParamsOnSave {
-    movie: Response
+    movie: MovieOrTvshowType
 }
 
 const Button_SaveMovieInMyList: React.FC<ISaveMovieInMyList> = ({ movie, title }) => {
@@ -30,7 +30,7 @@ const Button_SaveMovieInMyList: React.FC<ISaveMovieInMyList> = ({ movie, title }
     //         const list = localStorage.getItem(userList)
     //         setTooltipTitle('click for save in My List')
     //         if( list ) {
-    //             let data: Response[] = JSON.parse(list)
+    //             let data: MovieOrTvshowType[] = JSON.parse(list)
     //             setIsSaved(data.some((item) => item.id === movie.id))
     //         }
     //         else{ setIsSaved(false) }
@@ -46,12 +46,12 @@ const Button_SaveMovieInMyList: React.FC<ISaveMovieInMyList> = ({ movie, title }
             await setDoc( doc(db, userList, id), movie )
             // setIsSaved(true)
             if( list ) {
-                let dropData: Response[] = JSON.parse(list)
+                let dropData: MovieOrTvshowType[] = JSON.parse(list)
                 dropData.push(movie)
                 localStorage.setItem(userList, JSON.stringify(dropData))
             }
             if( list === null ) {
-                let dropData: Response[] = []
+                let dropData: MovieOrTvshowType[] = []
                 dropData.push(movie)
                 localStorage.setItem(userList, JSON.stringify(dropData))
             }
