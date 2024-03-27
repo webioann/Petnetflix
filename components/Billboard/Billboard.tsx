@@ -13,7 +13,7 @@ import './billboard.scss'
 async function Biilboard({media_type}: {media_type: Full_Media_Types}) {
 
     const data = await fetchBillboardData(media_type)
-    console.log('DATA NUMBER 22--> ', data.id, data.media_type)
+    // console.log('DATA NUMBER 22--> ', data.id, data.media_type)
 
     return (
         <section className='banner-container'>

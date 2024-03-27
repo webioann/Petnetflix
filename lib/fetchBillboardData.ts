@@ -2,8 +2,10 @@ import type { TrendingResponse, Response } from '@/types/trending.types'
 import type { Full_Media_Types } from '@/types/trending.types'
 
 export default async function fetchBillboardData(media_type: Full_Media_Types) {
+    // random page number for more variants of posters in Billboar bg image
+    const page_number = await Math.floor(Math.random() * 3) + 1;
 
-    const serverResponse = await fetch(`https://api.themoviedb.org/3/trending/${media_type}/week?language=en-US&page=1`, {
+    const serverResponse = await fetch(`https://api.themoviedb.org/3/trending/${media_type}/week?language=en-US&page=${page_number}`, {
         method: 'GET',
         headers: {
             accept: 'application/json',
