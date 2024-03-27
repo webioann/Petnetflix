@@ -26,7 +26,7 @@ const MovieCard = ({ movie }:{ movie: MovieOrTvshowType}) => {
                     <p className='movie-name'>
                         { movie.media_type === 'movie' ? movie.title : movie.name }
                     </p>
-                    <GenresListRow genres={movie?.genre_ids}/>
+                    <GenresListRow genres={movie?.genre_ids} font_size={10}/>
                 </div>
                 <div className="poster-controls-buttons">
                     <Button_VolumeOff/>

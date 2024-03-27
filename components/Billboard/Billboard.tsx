@@ -29,7 +29,7 @@ async function Biilboard({media_type}: {media_type: Full_Media_Types}) {
                     <p className='movie-overview'>
                         { data.overview.length > 150 ? data.overview.substring(0, 150 - 1) + ' ...' : data.overview }
                     </p> 
-                    <GenresListRow genres={data.genre_ids}/>
+                    <GenresListRow genres={data.genre_ids} font_size={16}/>
                     <div className="banner-buttons-row">
                         <Button_PlayVideo media_type={data.media_type} movie_id={data.id} variant='square'/>
                         <Button_SaveInMyList title='My List' movie={data} />

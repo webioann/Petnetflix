@@ -1,4 +1,4 @@
-import type { IVideoDataResponse, IVideosData } from "@/types/video.types"
+import type { IVideoDataResponse } from "@/types/video.types"
 import { Media_Type } from '../types/video.types';
 
 type VideoParams = {
