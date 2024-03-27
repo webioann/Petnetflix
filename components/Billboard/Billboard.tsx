@@ -7,7 +7,7 @@ import { MdInfoOutline } from 'react-icons/md'
 import Button_MoreInfo from "../ButtonsComponents/Button_MoreInfo"
 import Button_PlayVideo from "../ButtonsComponents/Button_PlayVideo"
 import Button_SaveInMyList from "../ButtonsComponents/Button_SaveInMyList"
-import { genres_list } from '../../data/allGenresList' 
+import GenresListRow from "../GenresList/GenresListRow" 
 import './billboard.scss'
 
 async function Biilboard({media_type}: {media_type: Full_Media_Types}) {
@@ -30,14 +30,7 @@ async function Biilboard({media_type}: {media_type: Full_Media_Types}) {
                     <p className='movie-overview'>
                         { data.overview.length > 150 ? data.overview.substring(0, 150 - 1) + ' ...' : data.overview }
                     </p> 
-                    <ul className='genres-list-row'>
-                        {data.genre_ids.slice(0,3).map((item) => (
-                            <li className='genre-item' key={item} >
-                                <span className='dot'/>
-                                <p>{ genres_list.filter((obj) => { return Number(obj.id) === item })[0].name }</p>
-                            </li>
-                        ))}
-                    </ul>
+                    <GenresListRow genres={data.genre_ids}/>
                     <div className="banner-buttons-row">
                         <Button_PlayVideo media_type={data.media_type} movie_id={data.id} variant='square'/>
                         <Button_SaveInMyList title='My List' movie={data} />

@@ -1,0 +1,19 @@
+@import '../../app/global.scss';
+// genres row list
+.genres-list-row{
+    display: flex;
+    gap: 10px;
+    font-size: 1rem;
+    padding-top: 0.5rem;
+    .genre-item{
+        display: flex;
+        align-items: center;
+        .dot{
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.2);
+            margin-right: 8px;
+        }
+    }
+}
