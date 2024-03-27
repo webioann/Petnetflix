@@ -14,8 +14,9 @@ const MovieCard = ({ movie }:{ movie: MovieOrTvshowType}) => {
         <li className='movie-card'>
             <Image 
                 src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
-                style={{objectFit: 'cover', width: '290px', height: '163px'}} 
-                fill
+                style={{objectFit: 'cover'}} 
+                width={290}
+                height={163}
                 priority 
                 alt={ movie.media_type === 'movie' ? movie.title : movie.name }
             />
