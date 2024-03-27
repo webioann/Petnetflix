@@ -1,7 +1,6 @@
 'use client'
-import { Media_Type } from '../../types/video.types';
-import Link from 'next/link'
-
+import { Media_Type } from '../../types/video.types'
+import { useRouter } from 'next/navigation'
 import { FaPlay } from 'react-icons/fa'
 import './buttons.scss'
 
@@ -13,19 +12,20 @@ type PlayVideoParam = {
 
 const Button_PlayVideo: React.FC<PlayVideoParam> = ({ media_type, movie_id,variant }) => {
 
-    // const media_type = 'tv'
-    // const movie_id = 52814
+    const router = useRouter()
+    const passParamsAndStartVideo = () => {
+        router.push(`/watch/${media_type}/${movie_id}`)
+    }
 
     return (
-        <Link 
-            href={`/watch/${media_type}/${movie_id}`}
+        <button 
+            onClick={passParamsAndStartVideo}
             className={ variant === 'circle' ? 'big-circle circle-button' : 'square-button' }
             >
             <FaPlay color='#fff' size={13} title='Play video'/>
             { variant === 'square' ? 'Play' : null}
-        </Link>
+        </button>
     )
 }
 
 export default Button_PlayVideo;
-// onClick={() => {console.log('SELECT AND START PLAY VIDEO')}}

@@ -1,19 +1,15 @@
-// import React from 'react'
+'use client'
+import { useRouter } from 'next/navigation'
 import { IoClose } from 'react-icons/io5'
 import './buttons.scss'
 
-type CloseVideoButtonProps = {
-    color: string
-    size: number
-}
+const Button_CloseVideo = () => {
+    const router = useRouter()
 
-const Button_CloseVideo: React.FC<CloseVideoButtonProps> = ({color, size}) => {
-    // only to close video player
     return (
         <div className='close-button'>
-            <span className='close-icon-box'
-                onClick={() => console.log('CLOSE VIDEO BUTTON')}>
-                <IoClose color={color} size={size}/>
+            <span onClick={() => router.back()} className='close-icon-box'>
+                <IoClose color='red' size={25}/>
             </span>
         </div>
     )

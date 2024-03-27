@@ -4,55 +4,28 @@
     width: 100%;
     min-height: 100vh;
     height: 100%;
-    // background-color: $netflix-black;
-    background-color: #fff;
-    color: $light;
+    background-color: var(--bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     .watch-content{
         width: 100%;
         max-width: 768px;
         margin: 0 auto;
-        // margin-top: 50px;
-        .close-button {
-            width: 100%;
-            display: flex;
-            justify-content: flex-end;
-            background-color: transparent;
-            padding-bottom: 5px;
-            .close-icon-box {
-                border-radius: 50%;
-                background-color: inherit;
-                padding: 5px;
-                overflow: hidden;
-                transition: background-color 0.3 linear;
-                &:hover {
-                    background-color: $bg-block-dark;
-                    cursor: pointer;
-                }
-            }
-        }
         .video-player{
             position: relative;
             background-color: $netflix-black;
             aspect-ratio: 16/9;
-            
+            z-index: 10;
         }
     }
-    // @media (min-width: $sm) {
-    //     .watch-content {
-    //         margin-top: 70px;
-    //     }
-    // }
-    // @media (min-width: $md) {
-    //     .watch-content {
-    //         margin-top: 90px;
-    //     }
-    // }
-    // @media (min-width: $xl) {
-    //     .watch-content {
-    //         margin-top: 110px;
-    //     }
-    // }
+    .bg_image{
+        position: absolute;
+        width: 100%;
+        object-fit: cover;
+        filter: blur(12px);
+        filter: brightness(0.5);
+        z-index: -10;
+    }
 }

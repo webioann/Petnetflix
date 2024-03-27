@@ -1,7 +1,9 @@
 import getTrailerVideoURL from '@/lib/getTrailerVideoURL'
 import { Media_Type } from '../../../types/video.types'
-import { IoClose } from 'react-icons/io5'
-import Link from 'next/link'
+import Button_CloseVideo from '@/components/ButtonsComponents/Button_CloseVideo'
+import image from '../../../public/login_background.jpg'
+import Image from 'next/image'
+
 import './watch-page.scss'
 
 type VideoParams = {
@@ -15,13 +17,15 @@ async function WatchPage({params}: {params: VideoParams}) {
 
     return (
         <main className="watch-page">
+            <Image 
+                src={image}
+                className='bg-image'
+                alt='page bg'
+                priority 
+                fill
+            />
             <div className='watch-content'>
-                {/* TODO:  make redirect to last page*/}
-                <Link href={'/browse'} className='close-button'>
-                    <span className='close-icon-box'>
-                        <IoClose  color='red' size={30}/>
-                    </span>
-                </Link>
+                <Button_CloseVideo/>
                 <div className='video-player'>
                     <iframe
                         width="100%"
