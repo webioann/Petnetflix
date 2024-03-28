@@ -8,7 +8,9 @@ function BrowsePage() {
         <section >
             <Billboard media_type="all"/>
             <TrendingMoviesSlider/>
-            <DiscoverMoviesSlider/>
+            <DiscoverMoviesSlider media_type="movie" genre_id={35}/>
+            <DiscoverMoviesSlider media_type="movie" genre_id={28}/>
+            <DiscoverMoviesSlider media_type="movie" genre_id={27}/>
         </section>
     )
 }

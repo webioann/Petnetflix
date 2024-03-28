@@ -1,6 +1,6 @@
 // import React, { useState, useRef } from 'react'
 import { SlArrowLeft, SlArrowRight } from 'react-icons/sl'
-import MovieCard from '../MovieCard/MovieCard';
+import MovieCard_Trending from '../MovieCard/MovieCard_Trending';
 import fetchTrendingMoviesAndTvshows from '@/lib/fetchTrendingMoviesAndTvshows';
 import './movies-slider.scss'
 
@@ -13,7 +13,7 @@ async function TrendingMoviesSlider() {
         <section className='slider-container'>
             <h2 className='row-title'>Trending</h2>
             <ul className="row-movies">
-                { movies?.map(movie => ( <MovieCard movie={movie} key={movie.id}/> ))}
+                { movies?.map(movie => ( <MovieCard_Trending movie={movie} key={movie.id}/> ))}
             </ul>
             <div className="arrow-icons-wrapper">
                 {/* <SlArrowLeft className={ isMoved ? 'arrow' : 'hidden-arrow' }

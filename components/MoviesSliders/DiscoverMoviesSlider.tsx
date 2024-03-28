@@ -1,12 +1,22 @@
 import { SlArrowLeft, SlArrowRight } from 'react-icons/sl'
-import MovieCard from '../MovieCard/MovieCard';
-import fetchDiscoverMoviesAndTvshows from '@/lib/fetchDiscoverMoviesAndTvshows';
+import MovieCard_Discover from '../MovieCard/MovieCart_Discover'
+import fetchDiscoverMoviesAndTvshows from '@/lib/fetchDiscoverMoviesAndTvshows'
+import { MovieOrTvshowType } from '@/types/trending.types'
+import { Media_Type } from '@/types/discover.types'
+import { movies_genres_list, tvshows_genres_list } from '@/data/genresList'
 import './movies-slider.scss'
 
-async function DiscoverMoviesSlider() {
+export interface IDiscoverMoviesProps {
+    media_type: Media_Type
+    genre_id: number
+}
 
-    const movies = await fetchDiscoverMoviesAndTvshows('tv')
-    console.log('MOVIES ----> ', movies)
+async function DiscoverMoviesSlider({media_type, genre_id}: IDiscoverMoviesProps) {
+
+
+
+    const movies = await fetchDiscoverMoviesAndTvshows({media_type, genre_id})
+    console.log('DISCOVER MOVIES ----> ', movies)
 
     return (
         <section className='slider-container'>
@@ -14,7 +24,7 @@ async function DiscoverMoviesSlider() {
             <h2 className='row-title'>Discover</h2>
             
             <ul className="row-movies">
-                { movies?.map(movie => ( <MovieCard movie={movie} key={movie.id}/> ))}
+                { movies?.map(movie => ( <MovieCard_Discover movie={movie} media_type={media_type} key={movie.id}/> ))}
             </ul>
             <div className="arrow-icons-wrapper">
                 {/* <SlArrowLeft className={ isMoved ? 'arrow' : 'hidden-arrow' }
@@ -33,3 +43,17 @@ async function DiscoverMoviesSlider() {
 }
 
 export default DiscoverMoviesSlider;
+    // const findGenreIdByName = async (genre: string) => {
+    //     let genre_id;
+    //     if(media_type === 'movie') {
+    //         const findedObj = movies_genres_list.find((item) => {item.name === genre})
+    //         findedObj && ( genre_id = findedObj.id )
+    //     }
+    //     if(media_type === 'tv') {
+    //         const findedObj = tvshows_genres_list.find((item) => {item.name === genre})
+    //         findedObj && ( genre_id = findedObj.id )
+    //     }
+    //     return genre_id
+    // }
+    // const genre_id = await findGenreIdByName(genre)
+    // console.log(genre_id)

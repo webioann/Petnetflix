@@ -4,20 +4,23 @@ import { UserContext } from '../../context/UserContext'
 import { AiOutlinePlus, AiOutlineCheck } from 'react-icons/ai'
 import { db } from '../../firebase.config'
 import { doc, setDoc } from 'firebase/firestore'
-// import { IMovie } from '../../types/movies.types'
+import { IDiscoverMovie } from '@/types/discover.types'
+import { Media_Type } from '@/types/discover.types'
+
 import type { TrendingResponse, MovieOrTvshowType } from '@/types/trending.types'
 
 import './buttons.scss'
 
 interface ISaveMovieInMyList {
-    movie: MovieOrTvshowType
+    movie: MovieOrTvshowType | IDiscoverMovie
+    media_type: Media_Type
     title?: string
 }
 interface IParamsOnSave {
-    movie: MovieOrTvshowType
+    movie: MovieOrTvshowType | IDiscoverMovie
 }
 
-const Button_SaveMovieInMyList: React.FC<ISaveMovieInMyList> = ({ movie, title }) => {
+const Button_SaveMovieInMyList: React.FC<ISaveMovieInMyList> = ({ movie, title, media_type }) => {
     const isSaved = false
 
     // const [isSaved, setIsSaved] = useState(false)
@@ -38,29 +41,29 @@ const Button_SaveMovieInMyList: React.FC<ISaveMovieInMyList> = ({ movie, title }
     //     else{ setTooltipTitle('login for save this movie in My List') }
     // })
 
-    const saveMovieInMyList = async ({ movie }: IParamsOnSave) => {
-        if(user?.email && movie) {
-            let id = movie.id.toString()
-            let userList = user?.email?.toString()
-            const list = localStorage.getItem(userList)
-            await setDoc( doc(db, userList, id), movie )
-            // setIsSaved(true)
-            if( list ) {
-                let dropData: MovieOrTvshowType[] = JSON.parse(list)
-                dropData.push(movie)
-                localStorage.setItem(userList, JSON.stringify(dropData))
-            }
-            if( list === null ) {
-                let dropData: MovieOrTvshowType[] = []
-                dropData.push(movie)
-                localStorage.setItem(userList, JSON.stringify(dropData))
-            }
-        }
-    }
+    // const saveMovieInMyList = async ({ movie }: IParamsOnSave) => {
+    //     if(user?.email && movie) {
+    //         let id = movie.id.toString()
+    //         let userList = user?.email?.toString()
+    //         const list = localStorage.getItem(userList)
+    //         await setDoc( doc(db, userList, id), movie )
+    //         // setIsSaved(true)
+    //         if( list ) {
+    //             let dropData: MovieOrTvshowType[] = JSON.parse(list)
+    //             dropData.push(movie)
+    //             localStorage.setItem(userList, JSON.stringify(dropData))
+    //         }
+    //         if( list === null ) {
+    //             let dropData: MovieOrTvshowType[] = []
+    //             dropData.push(movie)
+    //             localStorage.setItem(userList, JSON.stringify(dropData))
+    //         }
+    //     }
+    // }
 
     return (
         <button 
-            onClick={() => saveMovieInMyList({ movie })}
+            onClick={() => console.log('SAVE IN MY LIST')}
             className={ title ? 'square-button' : 'small-circle circle-button'}
             >
             <i>{ isSaved && user

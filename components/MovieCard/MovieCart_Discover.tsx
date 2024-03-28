@@ -5,10 +5,16 @@ import Button_Dislike from '../ButtonsComponents/Button_Dislike'
 import Button_SaveInMyList from '../ButtonsComponents/Button_SaveInMyList'
 import GenresListRow from '../GenresList/GenresListRow'
 import Image from "next/image"
-import { MovieOrTvshowType } from '@/types/trending.types'
+import { IDiscoverMovie } from '@/types/discover.types'
+import { Media_Type } from '@/types/discover.types'
 import './movie-card.scss'
 
-const MovieCard = ({ movie }:{ movie: MovieOrTvshowType}) => {
+interface IMovieCard {
+    movie: IDiscoverMovie
+    media_type: Media_Type
+}
+
+const MovieCard_Discover = ({ movie, media_type }: IMovieCard) => {
     
     return (
         <li className='movie-card'>
@@ -18,13 +24,13 @@ const MovieCard = ({ movie }:{ movie: MovieOrTvshowType}) => {
                 width={290}
                 height={163}
                 priority 
-                alt={ movie.media_type === 'movie' ? movie.title : movie.name }
+                alt={ media_type ? movie.title : movie.original_title }
             />
             <div className="movie-card-controls">
                 <div className="poster-controls-info">
-                    <Button_PlayVideo media_type={movie.media_type} movie_id={movie.id} variant='circle'/>
+                    <Button_PlayVideo media_type={media_type} movie_id={movie.id} variant='circle'/>
                     <p className='movie-name'>
-                        { movie.media_type === 'movie' ? movie.title : movie.name }
+                        { movie.title ? movie.title : movie.original_title }
                     </p>
                     <GenresListRow genres={movie?.genre_ids} font_size={10}/>
                 </div>
@@ -32,11 +38,11 @@ const MovieCard = ({ movie }:{ movie: MovieOrTvshowType}) => {
                     <Button_VolumeOff/>
                     <Button_Like/>
                     <Button_Dislike/>
-                    <Button_SaveInMyList movie={movie} />
+                    <Button_SaveInMyList movie={movie} media_type={media_type}/>
                 </div>
             </div>
         </li>
     )
 }
 
-export default MovieCard;
+export default MovieCard_Discover;
