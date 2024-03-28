@@ -1,3 +1,4 @@
+// 'use client'
 // import React, { useState, useRef } from 'react'
 import { SlArrowLeft, SlArrowRight } from 'react-icons/sl'
 import MovieCard_Trending from '../MovieCard/MovieCard_Trending';
@@ -8,6 +9,22 @@ async function MoviesSlider_Trending() {
 
     const movies = await fetchTrendingMoviesAndTvshows('all')
     // console.log('MOVIES ----> ', movies)
+    // const carouselRef = useRef<HTMLUListElement>(null)
+    // const [isMoved, setIsMoved] = useState(false)
+    // const [rightSliderEnd, setRightSliderEnd] = useState(false)
+
+    // const onArrowClick = (direct: 'left' | 'right') => {
+    //     const width: number = 290;
+    //     if( carouselRef.current && movies) {
+    //         setIsMoved(true)
+    //         const { scrollLeft, clientWidth, getBoundingClientRect } = carouselRef.current
+    //         const scrollTo = direct === 'left' ? scrollLeft - clientWidth - width : scrollLeft + clientWidth - width
+    //         carouselRef.current.scrollTo({ left: scrollTo, behavior: 'smooth' })
+    //         if(scrollLeft + clientWidth === movies.length * (width + 2 + 2) + 20 * 2) {
+    //             setRightSliderEnd(true)
+    //         }
+    //     }
+    // }
 
     return (
         <section className='slider-container'>

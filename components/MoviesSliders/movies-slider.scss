@@ -11,16 +11,11 @@
         padding: 0 20px;
         font-weight: 400;
         letter-spacing: 2px;
-        span{
-            padding: 3px 1rem;
-            letter-spacing: 3px;
-            color: $text-blue;
-        }
     }
     .row-movies {
         display: flex;
         overflow-x: scroll;
-        padding: 30px 20px 30px 20px;
+        padding: 30px 20px 20px 20px;
         transform: translateX(0px);
         transition: all 0.8s ease;
     }
@@ -46,7 +41,31 @@
             opacity: 0;
         }
     }
-    .row-movies::-webkit-scrollbar {
-        display: none;
-    }
+
+    // .row-movies::-webkit-scrollbar {
+    //     display: none;
+    // }
+}
+/* =========== CUSTOM SCROLLBAR ========  */
+::-webkit-scrollbar{
+    width: 10px;
+    height: 4px;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-color: $netflix-black;
+}
+::-webkit-scrollbar-thumb:horizontal{
+    border-radius: 2px; 
+    background-color: $netflix-red;
+    cursor: pointer;
+}
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+::-webkit-scrollbar-track:horizontal{
+    // background-color: rgba(0,0,0,0.2);
+    background-color: $netflix-black;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }

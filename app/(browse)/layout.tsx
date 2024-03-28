@@ -1,5 +1,4 @@
 import { ReactNode } from 'react'
-import Image from 'next/image'
 import NavigationHeader from '@/components/NavigatioHeader/NavigationHeader'
 import NetflixLogo from '@/components/NetflixLogo/NetflixLogo'
 import Navigation from '@/components/Navigation/Navigation'
@@ -9,9 +8,7 @@ import GiftLink from '@/components/EmptyLinksComponents/GiftLink'
 import MessageBell from '@/components/EmptyLinksComponents/MessageBell'
 import UserProfiles from '@/components/UserProfile/UserProfiles'
 import Container from "../../components/Container/Container";
-
 import  './browse.scss'
-import image from '../../public/login_background.jpg'
 
 async function BrowseLayout ({ children }: { children: ReactNode }) {
     // const session = await getServerSession(authOptions)

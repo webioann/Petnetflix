@@ -5,7 +5,7 @@ import MoviesSlider_Discover from "@/components/MoviesSliders/MoviesSlider_Disco
 function BrowsePage() {
 
     return (
-        <section >
+        <section style={{paddingBottom: '30px'}}>
             <Billboard media_type="all"/>
             <MoviesSlider_Trending/>
             <MoviesSlider_Discover media_type="movie" genre_id={35}/>
