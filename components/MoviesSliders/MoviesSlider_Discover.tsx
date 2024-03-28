@@ -11,12 +11,12 @@ export interface IDiscoverMoviesProps {
     genre_id: number
 }
 
-async function DiscoverMoviesSlider({media_type, genre_id}: IDiscoverMoviesProps) {
+async function MoviesSlider_Discover({media_type, genre_id}: IDiscoverMoviesProps) {
 
 
 
     const movies = await fetchDiscoverMoviesAndTvshows({media_type, genre_id})
-    console.log('DISCOVER MOVIES ----> ', movies)
+    // console.log('DISCOVER MOVIES ----> ', movies)
 
     return (
         <section className='slider-container'>
@@ -42,7 +42,7 @@ async function DiscoverMoviesSlider({media_type, genre_id}: IDiscoverMoviesProps
     )
 }
 
-export default DiscoverMoviesSlider;
+export default MoviesSlider_Discover;
     // const findGenreIdByName = async (genre: string) => {
     //     let genre_id;
     //     if(media_type === 'movie') {

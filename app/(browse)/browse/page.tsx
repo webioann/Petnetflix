@@ -1,16 +1,16 @@
 import Billboard from "@/components/Billboard/Billboard";
-import TrendingMoviesSlider from "@/components/MoviesSliders/TrendingMoviesSlider"
-import DiscoverMoviesSlider from "@/components/MoviesSliders/DiscoverMoviesSlider";
+import MoviesSlider_Trending from "@/components/MoviesSliders/MoviesSlider_Trending"
+import MoviesSlider_Discover from "@/components/MoviesSliders/MoviesSlider_Discover";
 
 function BrowsePage() {
 
     return (
         <section >
             <Billboard media_type="all"/>
-            <TrendingMoviesSlider/>
-            <DiscoverMoviesSlider media_type="movie" genre_id={35}/>
-            <DiscoverMoviesSlider media_type="movie" genre_id={28}/>
-            <DiscoverMoviesSlider media_type="movie" genre_id={27}/>
+            <MoviesSlider_Trending/>
+            <MoviesSlider_Discover media_type="movie" genre_id={35}/>
+            <MoviesSlider_Discover media_type="movie" genre_id={28}/>
+            <MoviesSlider_Discover media_type="movie" genre_id={27}/>
         </section>
     )
 }

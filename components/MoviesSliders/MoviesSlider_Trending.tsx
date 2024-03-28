@@ -4,7 +4,7 @@ import MovieCard_Trending from '../MovieCard/MovieCard_Trending';
 import fetchTrendingMoviesAndTvshows from '@/lib/fetchTrendingMoviesAndTvshows';
 import './movies-slider.scss'
 
-async function TrendingMoviesSlider() {
+async function MoviesSlider_Trending() {
 
     const movies = await fetchTrendingMoviesAndTvshows('all')
     // console.log('MOVIES ----> ', movies)
@@ -31,4 +31,4 @@ async function TrendingMoviesSlider() {
     )
 }
 
-export default TrendingMoviesSlider;
+export default MoviesSlider_Trending;
