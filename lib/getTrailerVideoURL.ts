@@ -1,11 +1,5 @@
 import type { IVideoDataResponse } from "@/types/video.types"
-import { Media_Type } from '../types/video.types';
-
-type VideoParams = {
-    media_type: 'movie' | 'tv'
-    movie_id: number 
-}
-
+import { Media_Type } from '../types/trending.types';
 
 export default async function getTrailerVideoURL(media_type: Media_Type, movie_id: number) {
 

@@ -17,7 +17,7 @@ async function Biilboard({media_type}: {media_type: Full_Media_Types}) {
     return (
         <section className='banner-container'>
             <Image 
-                src={`https://image.tmdb.org/t/p/original/${data.backdrop_path}`}
+                src={`https://image.tmdb.org/t/p/original/${data.backdrop_path ? data.backdrop_path : data.poster_path}`}
                 style={{objectFit: 'cover'}} 
                 fill
                 priority 

@@ -13,7 +13,7 @@ const MovieCard = ({ movie }:{ movie: MovieOrTvshowType}) => {
     return (
         <li className='movie-card'>
             <Image 
-                src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
+                src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path ? movie.backdrop_path : movie.poster_path}`}
                 style={{objectFit: 'cover'}} 
                 width={290}
                 height={163}

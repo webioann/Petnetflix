@@ -1,4 +1,3 @@
-export type Media_Type = 'tv' | 'movie'
 
 export interface IVideosData {
     iso_639_1: string

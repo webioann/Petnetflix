@@ -1,5 +1,10 @@
 // movies and tv shows total list ===
-export const genres_list = [
+type GenreDataType = {
+    id: number
+    name: string
+}
+
+export const genres_list: GenreDataType[] = [
     {id: 28, name: 'Action'},
     {id: 12, name: 'Adventure'},
     {id: 10759, name: 'Action & Adventure'},
@@ -29,7 +34,7 @@ export const genres_list = [
     {id: 37, name: 'Western'},
 ];
 // TV shows genres list ============
-export const tvshows_genres_list = [
+export const tvshows_genres_list: GenreDataType[] = [
     {id: 10759, name: 'Action & Adventure'},
     {id: 16, name: 'Animation'},
     {id: 35, name: 'Comedy'},
@@ -48,7 +53,7 @@ export const tvshows_genres_list = [
     {id: 37, name: 'Western'},
 ];
 // movies genres list =============
-export const movies_genres_list = [
+export const movies_genres_list: GenreDataType[] = [
     {id: 28, name: 'Action'},
     {id: 12, name: 'Adventure'},
     {id: 16, name: 'Animation'},

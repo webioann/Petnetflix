@@ -1,4 +1,5 @@
 export type Full_Media_Types = 'all' | 'tv' | 'movie'
+export type Media_Type = 'tv' | 'movie'
 
 export interface IMovie {
     media_type: 'movie';
