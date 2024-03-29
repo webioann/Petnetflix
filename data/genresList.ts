@@ -3,7 +3,7 @@ type GenreDataType = {
     id: number
     name: string
 }
-
+// full list without duplicates
 export const genres_list: GenreDataType[] = [
     {id: 28, name: 'Action'},
     {id: 12, name: 'Adventure'},

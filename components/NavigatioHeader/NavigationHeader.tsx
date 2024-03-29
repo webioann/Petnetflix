@@ -33,8 +33,3 @@ const NavigationHeader = ({ children }: {children: ReactNode}) => {
 }
 
 export default NavigationHeader;
-{/* <Container width='1600px'>
-<div className='navbar-wrapper'>
-    {children}
-</div>
-</Container> */}

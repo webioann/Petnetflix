@@ -1,4 +1,3 @@
-import React from 'react'
 import './auth-footer.scss'
 
 const AuthPageFooter = () => {

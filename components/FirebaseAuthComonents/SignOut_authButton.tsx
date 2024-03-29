@@ -12,7 +12,7 @@ const SignOut_authButton = () => {
     const { user } = useContext(UserContext)
 
     const signOutUser = async () => {
-        // just sign out from account and return at Home
+        // just sign out from account and return at Browse page
         try {
             await signOut(auth)
             router.push('/browse')

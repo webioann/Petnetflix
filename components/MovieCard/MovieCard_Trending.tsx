@@ -6,7 +6,6 @@ import Button_SaveInMyList from '../ButtonsComponents/Button_SaveInMyList'
 import GenresListRow from '../GenresList/GenresListRow'
 import Image from "next/image"
 import { MovieOrTvshowType } from '@/types/trending.types'
-import { Media_Type } from '@/types/discover.types'
 import './movie-card.scss'
 
 const MovieCard_Trending = ( {movie}: {movie: MovieOrTvshowType}) => {

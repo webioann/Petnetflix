@@ -1,6 +1,5 @@
 'use client'
 import React, { useState, useEffect, useRef } from 'react'
-// import { useLocation } from 'react-router-dom';
 import { IMovie } from '../../types/movies.types'
 import { GoSearch } from 'react-icons/go'
 import { IoClose } from 'react-icons/io5'
@@ -9,35 +8,16 @@ import './search-bar.scss'
 const SearchBar = () => {
 
     const [barIsActive, setBarIsActive] = useState(false)
-    const [renderThisComponent, setRenderThisComponent] = useState(true)
     const [value, setValue] = useState('')
     const [searchResults, setSearchResults] = useState<IMovie[] | null>(null)
     const [searchQuery, setSearchQuery] = useState<string | null>(null)
-    // const [ fetchSearchMovies, { data: movies } ] = useLazySearchMovieQuery()
-    // let location = useLocation(); 
     const inputRef = useRef<HTMLInputElement>(null)
-
-    // useEffect(() => {
-    //     // if have result from server will put in him in redux state
-    //     movies && dispatch(setSearchResults(movies))
-    // }, [movies])
 
     useEffect(() => { 
         // reset SearchBar state if page changed
         setSearchResults(null)
         setValue('')
         setBarIsActive(false)
-    }, [])
-    
-    useEffect(() => {
-        // prohibits searching when on the pages Account, My List 
-        if(location.pathname === "/my_list") {
-            setRenderThisComponent(false)
-        }
-        else if(location.pathname === "/account") {
-            setRenderThisComponent(false)
-        }
-        else { setRenderThisComponent(true) }
     }, [])
 
     const onClickSearchIcon = () => {
@@ -66,37 +46,35 @@ const SearchBar = () => {
         }
     }
 
-    if( renderThisComponent ) {
-        return (
-            <div className={barIsActive ? 'search-bar' : 'shorted-search-bar'}>
-                <GoSearch 
-                    size={24}
-                    color='#fff'
-                    className='search-icon'
-                    onClick={onClickSearchIcon}
+    return (
+        <div className={barIsActive ? 'search-bar' : 'shorted-search-bar'}>
+            <GoSearch 
+                size={24}
+                color='#fff'
+                className='search-icon'
+                onClick={onClickSearchIcon}
+            />
+            <input 
+                className='search-input'
+                placeholder='Title, people, genres...'
+                type='text'
+                ref={inputRef}
+                value={value}
+                onChange={(e) => setValue(e.target.value)}
+            />
+            <IoClose 
+                onClick={() => {
+                    setValue('')
+                    setBarIsActive(false)
+                    setSearchQuery(null)
+                    setSearchResults(null)
+                }}
+                className='close-input'
+                color='#fff' 
+                size={24}
                 />
-                <input 
-                    className='search-input'
-                    placeholder='Title, people, genres...'
-                    type='text'
-                    ref={inputRef}
-                    value={value}
-                    onChange={(e) => setValue(e.target.value)}
-                />
-                <IoClose 
-                    onClick={() => {
-                        setValue('')
-                        setBarIsActive(false)
-                        setSearchQuery(null)
-                        setSearchResults(null)
-                    }}
-                    className='close-input'
-                    color='#fff' 
-                    size={24}
-                    />
-            </div>
-        )
-    } else { return null }
+        </div>
+    )
 }
 
 export default SearchBar;

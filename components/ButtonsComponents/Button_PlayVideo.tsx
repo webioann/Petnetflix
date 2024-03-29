@@ -1,5 +1,5 @@
 'use client'
-import { Media_Type } from '../../types/video.types'
+import { Media_Type } from '../../types/discover.types'
 import { useRouter } from 'next/navigation'
 import { FaPlay } from 'react-icons/fa'
 import './buttons.scss'

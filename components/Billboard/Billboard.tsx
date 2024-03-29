@@ -2,7 +2,6 @@ import fetchBillboardData from "@/lib/fetchBillboardData"
 import Image from "next/image"
 import type { Full_Media_Types } from '@/types/trending.types'
 import Container from "../Container/Container"
-import { MdInfoOutline } from 'react-icons/md'
 import Button_MoreInfo from "../ButtonsComponents/Button_MoreInfo"
 import Button_PlayVideo from "../ButtonsComponents/Button_PlayVideo"
 import Button_SaveInMyList from "../ButtonsComponents/Button_SaveInMyList"

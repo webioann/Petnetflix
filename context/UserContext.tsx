@@ -50,7 +50,6 @@ const UserContextProvider = ({ children }: {children: ReactNode}) => {
             { children }
         </UserContext.Provider>
     )
-    
 }
 
 export default UserContextProvider;

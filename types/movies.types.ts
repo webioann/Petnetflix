@@ -24,15 +24,6 @@ export interface IMoviesDataResponse {
     total_pages: number
     total_results: number
 }
-export interface TypeOfMovie {
-    type: 
-    | 'Bloopers' 
-    | 'Featurette' 
-    | 'Behind of Scenes' 
-    | 'Clip' 
-    | 'Trailer' 
-    | 'Teaser'
-}
 export interface IGenres {
     id: number
     name: string

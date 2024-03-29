@@ -1,12 +1,11 @@
 'use client'
-import React, { useState } from 'react'
 import Link from 'next/link'
 import { BsBellFill } from 'react-icons/bs'
 import './fake-links.scss'
 
 const MessageBell = () => {
     // mock link button
-    const [messageCount, setMessageCount] = useState<number>(1)
+    const messageCount = 2;
 
     return (
         <Link href={'#'} className='bell-wrapper fake-link'>

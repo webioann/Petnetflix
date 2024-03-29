@@ -1,5 +1,5 @@
 import type { IVideoDataResponse } from "@/types/video.types"
-import { Media_Type } from '../types/trending.types';
+import { Media_Type } from '../types/discover.types';
 
 export default async function getTrailerVideoURL(media_type: Media_Type, movie_id: number) {
 
@@ -15,5 +15,6 @@ export default async function getTrailerVideoURL(media_type: Media_Type, movie_i
     const results = (await response).results
     const index = results.findIndex((element ) => element.type === 'Trailer')
     const key = results[index]?.key
+    
     return key
 };

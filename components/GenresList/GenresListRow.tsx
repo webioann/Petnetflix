@@ -2,6 +2,7 @@ import { genres_list } from '../../data/genresList'
 import './genres-list-row.scss' 
 
 function GenresListRow({genres, font_size}: {genres:  number[], font_size: number}) {
+    
     return (
         <ul className='genres-row'
             style={{

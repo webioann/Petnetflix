@@ -1,8 +1,7 @@
-import React from 'react'
 import { useRouter } from 'next/navigation'
-import { auth, provider } from '../../firebase.config';
+import { auth, provider } from '../../firebase.config'
 import { signInWithPopup } from "firebase/auth"
-import { FaGoogle } from 'react-icons/fa';
+import { FaGoogle } from 'react-icons/fa'
 import './auth-button.scss'
 
 const GoogleSignIn_authButton = () => {

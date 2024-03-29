@@ -1,3 +1,12 @@
+export interface TypeOfVideo {
+    type: 
+    | 'Bloopers' 
+    | 'Featurette' 
+    | 'Behind of Scenes' 
+    | 'Clip' 
+    | 'Trailer' 
+    | 'Teaser'
+}
 
 export interface IVideosData {
     iso_639_1: string
@@ -6,7 +15,7 @@ export interface IVideosData {
     key: string
     site: string
     size: number
-    type: string
+    type: TypeOfVideo
     official: boolean
     published_at: string
     id: string
