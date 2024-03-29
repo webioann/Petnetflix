@@ -1,9 +1,8 @@
 import getTrailerVideoURL from '@/lib/getTrailerVideoURL'
-import { Media_Type } from '../../../types/video.types'
+import { Media_Type } from '../../../types/discover.types'
 import Button_CloseVideo from '@/components/ButtonsComponents/Button_CloseVideo'
 import image from '../../../public/login_background.jpg'
 import Image from 'next/image'
-
 import './watch-page.scss'
 
 type VideoParams = {
@@ -33,7 +32,7 @@ async function WatchPage({params}: {params: VideoParams}) {
                         src={`https://www.youtube.com/embed/${url}?autoplay=1`}
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
-                        title="Embedded youtube"
+                        title="Youtube trailer"
                     />  
                 </div>
             </div>

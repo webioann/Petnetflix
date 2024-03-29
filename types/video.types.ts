@@ -1,12 +1,10 @@
-export interface TypeOfVideo {
-    type: 
+type TypeOfVideo =
     | 'Bloopers' 
     | 'Featurette' 
     | 'Behind of Scenes' 
     | 'Clip' 
     | 'Trailer' 
     | 'Teaser'
-}
 
 export interface IVideosData {
     iso_639_1: string
