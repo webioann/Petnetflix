@@ -16,7 +16,9 @@ export default async function fetchBillboardData(media_type: Full_Media_Types) {
     // fetch only one random results
     let result: Promise<TrendingResponse> = serverResponse.json()
     const results = (await result).results
-    const resultsLength = results.length
+    const media_exists = results.filter((item) => item.media_type === 'movie' || item.media_type === 'tv')
+    const image_exists = media_exists.filter((item) => item.backdrop_path !== null || item.poster_path !== null)
+    const resultsLength = image_exists.length
     let randomIndex = Math.floor(Math.random() *  resultsLength)
     const filtered = results.filter((item, index) => index == randomIndex)
     const oneRandomMovie = filtered[0]

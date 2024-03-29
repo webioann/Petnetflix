@@ -19,7 +19,8 @@ export default async function fetchDiscoverMoviesAndTvshows({media_type, genre_i
     // fetch the first 10 results for better app performance (not 20)
     let result: Promise<DiscoverResponse> = serverResponse.json()
     const results = (await result).results
-    const firstTenResults = results.filter((item, index) => index < 10)
+    const image_exists = results.filter((item) => item.backdrop_path !== null || item.poster_path !== null)
+    const firstTenResults = image_exists.filter((item, index) => index < 10)
 
     return firstTenResults
 };
