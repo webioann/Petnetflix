@@ -4,7 +4,7 @@ import Button_CloseVideo from '@/components/ButtonsComponents/Button_CloseVideo'
 import image from '../../../public/login_background.jpg'
 import Image from 'next/image'
 import Container from '@/components/Container/Container'
-import MovieCard_Trending from '@/components/MovieCard/MovieCard_Trending'
+import MovieCard_Searching from '@/components/MovieCard/MovieCard_Searching'
 import './search-page.scss'
 
 
@@ -25,12 +25,9 @@ async function SearchPage({params}: {params: {search_query: string}}) {
                             </span>
                         ))}
                     </ul>
-
                 </section>
-
-                <ul>
-                    { searching_results.map(movie => ( 
-                    <MovieCard_Trending movie={movie} key={movie.id}/> ))}
+                <ul className='list-searched-movies'>
+                    { searching_results.map(movie => ( <MovieCard_Searching movie={movie} key={movie.id}/> ))}
                 </ul>
 
 

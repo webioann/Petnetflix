@@ -15,7 +15,6 @@
             color: red;
             width: 58ch;
         }
-
         .searched-names{
             display: inline-block;
             list-style: none;
@@ -32,7 +31,30 @@
                 color: blue;
                 transform: scale(1.05);
             }
-    
         }
+    }
+    .list-searched-movies{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        justify-items: center;
+    }
+    @media (min-width: 600px) {
+        .list-searched-movies{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }    
+    }
+    @media (min-width: 900px) {
+        .list-searched-movies{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }    
+    }
+    @media (min-width: 1200px) {
+        .list-searched-movies{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        } 
     }
 } 
