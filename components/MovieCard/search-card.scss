@@ -5,7 +5,6 @@
     position: relative;
     z-index: 10;
     &:hover {
-        // transform: scale(1.3);
         .search-card-controls{
             transition: all 0.4s linear 0.1s;
             opacity: 1;

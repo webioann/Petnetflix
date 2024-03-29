@@ -9,7 +9,7 @@ const Container = ({ width, children }: { children: ReactNode; width: number }) 
             marginRight: 'auto',
             height: '100%',
             position: 'relative',
-            padding: '1rem'
+            padding: '0 1rem'
         }}>
             { children }
         </div>
