@@ -14,7 +14,7 @@ async function BrowseLayout ({ children }: { children: ReactNode }) {
     // const session = await getServerSession(authOptions)
     // if (session) redirect("/");
     return (
-        <main className='browse-page'>
+        <main className='browse-layout'>
             <Container width='1600'>
                 <NavigationHeader>
                     <NetflixLogo/>

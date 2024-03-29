@@ -1,5 +1,6 @@
 'use client'
 import React, { useState, useEffect, ReactNode } from 'react'
+import Container from '@/components/Container/Container'
 import './header.scss'
 
 
@@ -23,11 +24,11 @@ const NavigationHeader = ({ children }: {children: ReactNode}) => {
     
     return (
         <section className={fadedNavbar ? 'navbar nav-faded' : 'navbar nav-black'}>
-            <div className='nav-container'>
+            <Container width={1400}>
                 <div className='navbar-wrapper'>
                     {children}
                 </div>
-            </div>
+            </Container>
         </section>
     )
 }

@@ -1,6 +1,6 @@
 import { ReactNode} from 'react'
 
-const Container = ({ width, children }: { children: ReactNode; width: string }) => {
+const Container = ({ width, children }: { children: ReactNode; width: number }) => {
     return (
         <div style={{
             width: '100%',
@@ -9,6 +9,7 @@ const Container = ({ width, children }: { children: ReactNode; width: string }) 
             marginRight: 'auto',
             height: '100%',
             position: 'relative',
+            padding: '1rem'
         }}>
             { children }
         </div>

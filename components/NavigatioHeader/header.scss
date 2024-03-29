@@ -8,21 +8,11 @@
     z-index: 20;
     display: flex;
     justify-content: center;
-    .nav-container{
-        width: 100%;
-        max-width: 1400px;
-        margin-left: auto;
-        margin-right: auto;
-        height: 100%;
-        position: relative;
-        .navbar-wrapper {
-            height: $header-hight;
-            gap: 1rem;
-            display: flex;
-            align-items: center;
-            padding: 1rem;
-        }
-    
+    .navbar-wrapper {
+        height: $header-hight;
+        gap: 1rem;
+        display: flex;
+        align-items: center;
     }
 }
 .nav-black {
