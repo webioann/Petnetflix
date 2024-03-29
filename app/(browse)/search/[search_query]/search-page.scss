@@ -1,3 +1,4 @@
+@import '../../../global.scss';
 
 .search-page{
     width: 100%;
@@ -6,8 +7,32 @@
     background-color: var(--bg-color);
     padding-top: var(--header-hight);
     position: relative;
-    .title{
-        border: 1px solid red;
+    .titles{
+        width: 100%;
+        padding: 1rem;
+        display: flex;
+        .explore{
+            color: red;
+            width: 58ch;
+        }
 
+        .searched-names{
+            display: inline-block;
+            list-style: none;
+            padding: 5px;
+            font-size: 14px;
+            .name-item{
+                display: inline-block;
+                border-left: 1px solid #fff;
+                padding: 0 10px;
+                cursor: pointer;
+                transition: all 0.5s linear;
+            }
+            & :hover{
+                color: blue;
+                transform: scale(1.05);
+            }
+    
+        }
     }
 } 
