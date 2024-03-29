@@ -33,28 +33,35 @@
             }
         }
     }
-    .list-searched-movies{
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        justify-items: center;
-    }
-    @media (min-width: 600px) {
+    .wrapper{
+        display: flex;
+        justify-content: center;
         .list-searched-movies{
             display: grid;
-            grid-template-columns: 1fr 1fr;
-        }    
+            grid-template-columns: 1fr;
+            gap: 5px;
+        }
+        @media (min-width: 600px) {
+            .list-searched-movies{
+                grid-template-columns: repeat(2, 1fr);
+            }    
+        }
+        @media (min-width: 890px) {
+            .list-searched-movies{
+                grid-template-columns: repeat(3, 1fr);
+            }    
+        }
+        @media (min-width: 1180px) {
+            .list-searched-movies{
+                grid-template-columns: repeat(4, 1fr);
+            } 
+        }
+        @media (min-width: 1470px) {
+            .list-searched-movies{
+                grid-template-columns: repeat(5, 1fr);
+            } 
+        }
+    
     }
-    @media (min-width: 900px) {
-        .list-searched-movies{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-        }    
-    }
-    @media (min-width: 1200px) {
-        .list-searched-movies{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-        } 
-    }
+
 } 
