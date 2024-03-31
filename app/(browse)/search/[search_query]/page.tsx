@@ -18,6 +18,7 @@ async function SearchPage({params}: {params: {search_query: string}}) {
             <Container width={1400}>
                 <section className='titles'>
                     <span className='explore'>Explore titles related to: </span>
+                    { searching_results.length == 0 && <p>Movies by query "{params.search_query}" not found. </p> }
                     <ul className='searched-names'>
                         {searching_results.map(item => (
                             <span key={item.id} className='name-item'>
