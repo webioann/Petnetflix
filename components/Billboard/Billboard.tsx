@@ -31,7 +31,7 @@ async function Biilboard({media_type}: {media_type: Full_Media_Types}) {
                     <GenresListRow genres={data.genre_ids} font_size={16}/>
                     <div className="banner-buttons-row">
                         <Button_PlayVideo media_type={data.media_type} movie_id={data.id} variant='square'/>
-                        <Button_SaveInMyList title='My List' movie={data} media_type={data.media_type}/>
+                        <Button_SaveInMyList title='My List' movie={data} media_type={data.media_type} icon_size={25}/>
                         <Button_MoreInfo/>
                         <div className="spring-div" style={{ flex: 1 }}/> 
                     </div>

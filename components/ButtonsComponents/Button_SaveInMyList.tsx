@@ -15,12 +15,13 @@ interface ISaveMovieInMyList {
     movie: MovieOrTvshowType | IDiscoverMovie
     media_type: Media_Type
     title?: string
+    icon_size: number
 }
 interface IParamsOnSave {
     movie: MovieOrTvshowType | IDiscoverMovie
 }
 
-const Button_SaveMovieInMyList: React.FC<ISaveMovieInMyList> = ({ movie, title, media_type }) => {
+const Button_SaveMovieInMyList: React.FC<ISaveMovieInMyList> = ({ movie, title, media_type, icon_size }) => {
     const isSaved = false
 
     // const [isSaved, setIsSaved] = useState(false)
@@ -58,21 +59,42 @@ const Button_SaveMovieInMyList: React.FC<ISaveMovieInMyList> = ({ movie, title, 
     //             dropData.push(movie)
     //             localStorage.setItem(userList, JSON.stringify(dropData))
     //         }
-    //     }
+    //     }np
     // }
-
-    return (
-        <button 
-            onClick={() => console.log('SAVE IN MY LIST')}
-            className={ title ? 'square-button' : 'circle-button'}
-            >
-            <i>{ isSaved && user
-                ? <FaCheck size={12} color='#fff' title='this movie saved in My List'/> 
-                : <FaPlus size={12} color='#fff' title='save in My List'/>}
-            </i>
-            { title }
-        </button>
-    )
+    // this button only for Biilboard component
+    if(title) {
+        return (
+            <button 
+                onClick={() => console.log('SAVE IN MY LIST')}
+                className='square-button'
+                >
+                <i>{ isSaved && user
+                    ? <FaCheck size={18} color='#fff' title='this movie saved in My List'/> 
+                    : <FaPlus size={18} color='#fff' title='save in My List'/>}
+                </i>
+                { title }
+            </button>
+        )
+    }
+    else {
+        return (
+            <button 
+                onClick={() => console.log('SAVE IN MY LIST')}
+                style={{
+                    width: `${icon_size * 2}px`,
+                    height: `${icon_size * 2}px`,
+                    // paddingLeft: '1px',
+                    // paddingTop: '1px'
+                }}
+                className='small-circle circle-button'
+                >
+                <i>{ isSaved && user
+                    ? <FaCheck size={icon_size} color='#fff' title='this movie saved in My List'/> 
+                    : <FaPlus size={icon_size} color='#fff' title='save in My List'/>}
+                </i>
+            </button>
+        )
+    }
 }
 
 export default Button_SaveMovieInMyList;

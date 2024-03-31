@@ -32,7 +32,7 @@ const MovieCard_Searching = ( {movie}: {movie: MovieOrTvshowType}) => {
                     <Button_VolumeOff icon_size={14}/>
                     <Button_Like icon_size={14}/>
                     <Button_Dislike icon_size={14}/>
-                    <Button_SaveInMyList movie={movie} media_type={movie.media_type}/>
+                    <Button_SaveInMyList movie={movie} media_type={movie.media_type} icon_size={14}/>
                 </div>
             </div>
         </li>

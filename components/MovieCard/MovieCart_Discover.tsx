@@ -38,7 +38,7 @@ const MovieCard_Discover = ({ movie, media_type }: IMovieCard) => {
                     <Button_VolumeOff icon_size={10}/>
                     <Button_Like icon_size={10}/>
                     <Button_Dislike icon_size={10}/>
-                    <Button_SaveInMyList movie={movie} media_type={media_type}/>
+                    <Button_SaveInMyList movie={movie} media_type={media_type} icon_size={10}/>
                 </div>
             </div>
         </li>

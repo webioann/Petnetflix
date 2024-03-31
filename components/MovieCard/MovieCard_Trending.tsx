@@ -32,7 +32,7 @@ const MovieCard_Trending = ( {movie}: {movie: MovieOrTvshowType}) => {
                     <Button_VolumeOff icon_size={10}/>
                     <Button_Like icon_size={10}/>
                     <Button_Dislike icon_size={10}/>
-                    <Button_SaveInMyList movie={movie} media_type={movie.media_type}/>
+                    <Button_SaveInMyList movie={movie} media_type={movie.media_type} icon_size={10}/>
                 </div>
             </div>
         </li>
