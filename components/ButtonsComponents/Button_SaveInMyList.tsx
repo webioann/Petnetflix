@@ -1,7 +1,7 @@
 'use client'
 import { useContext } from 'react'
 import { UserContext } from '../../context/UserContext'
-import { AiOutlinePlus, AiOutlineCheck } from 'react-icons/ai'
+import { FaPlus, FaCheck } from 'react-icons/fa6'
 import { db } from '../../firebase.config'
 import { doc, setDoc } from 'firebase/firestore'
 import { IDiscoverMovie } from '@/types/discover.types'
@@ -64,11 +64,11 @@ const Button_SaveMovieInMyList: React.FC<ISaveMovieInMyList> = ({ movie, title, 
     return (
         <button 
             onClick={() => console.log('SAVE IN MY LIST')}
-            className={ title ? 'square-button' : 'small-circle circle-button'}
+            className={ title ? 'square-button' : 'circle-button'}
             >
             <i>{ isSaved && user
-                ? <AiOutlineCheck size={12} color='#fff' title='this movie saved in My List'/> 
-                : <AiOutlinePlus size={12} color='#fff' title='TTTTTTTTTTTTTTTTTTTT'/>}
+                ? <FaCheck size={12} color='#fff' title='this movie saved in My List'/> 
+                : <FaPlus size={12} color='#fff' title='save in My List'/>}
             </i>
             { title }
         </button>

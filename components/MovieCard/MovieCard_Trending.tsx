@@ -29,9 +29,9 @@ const MovieCard_Trending = ( {movie}: {movie: MovieOrTvshowType}) => {
                     <GenresListRow genres={movie?.genre_ids} font_size={10}/>
                 </div>
                 <div className="poster-controls-buttons">
-                    <Button_VolumeOff/>
-                    <Button_Like/>
-                    <Button_Dislike/>
+                    <Button_VolumeOff icon_size={10}/>
+                    <Button_Like icon_size={10}/>
+                    <Button_Dislike icon_size={10}/>
                     <Button_SaveInMyList movie={movie} media_type={movie.media_type}/>
                 </div>
             </div>

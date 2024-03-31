@@ -35,9 +35,9 @@ const MovieCard_Discover = ({ movie, media_type }: IMovieCard) => {
                     <GenresListRow genres={movie?.genre_ids} font_size={10}/>
                 </div>
                 <div className="poster-controls-buttons">
-                    <Button_VolumeOff/>
-                    <Button_Like/>
-                    <Button_Dislike/>
+                    <Button_VolumeOff icon_size={10}/>
+                    <Button_Like icon_size={10}/>
+                    <Button_Dislike icon_size={10}/>
                     <Button_SaveInMyList movie={movie} media_type={media_type}/>
                 </div>
             </div>

@@ -17,41 +17,6 @@
             background-color: $shadow;
         }
     }
-    .search-card-controls{
-        width: 290px;
-        height: 163px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        display: flex;
-        opacity: 0;
-        visibility: hidden;
-        color: $less-white;
-        padding: 0.5rem;
-        background-color: transparent;
-        transition: all 0.4s linear;
-        z-index: 10;
-        .poster-controls-info {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            .movie-name{
-                font-size: 1rem;
-                font-weight: 400;
-                padding-top: 1rem;
-            }
-        }
-        .poster-controls-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            justify-content: flex-end;
-        }
-
-    }
     .movie-card-controls {
         position: absolute;
         top: 0;

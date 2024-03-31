@@ -39,27 +39,15 @@
             grid-template-columns: 1fr;
             gap: 5px;
         }
-        @media (min-width: 600px) {
+        @media (min-width: 765px) {
             .list-searched-movies{
                 grid-template-columns: repeat(2, 1fr);
             }    
         }
-        @media (min-width: 890px) {
+        @media (min-width: 1145px) {
             .list-searched-movies{
                 grid-template-columns: repeat(3, 1fr);
             }    
         }
-        @media (min-width: 1180px) {
-            .list-searched-movies{
-                grid-template-columns: repeat(4, 1fr);
-            } 
-        }
-        @media (min-width: 1470px) {
-            .list-searched-movies{
-                grid-template-columns: repeat(5, 1fr);
-            } 
-        }
-    
     }
-
 } 

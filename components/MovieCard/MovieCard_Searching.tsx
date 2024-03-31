@@ -15,8 +15,8 @@ const MovieCard_Searching = ( {movie}: {movie: MovieOrTvshowType}) => {
             <Image 
                 src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path ? movie.backdrop_path : movie.poster_path}`}
                 style={{objectFit: 'cover'}} 
-                width={290}
-                height={163}
+                width={375}
+                height={211}
                 priority 
                 alt={ movie.media_type === 'movie' ? movie.title : movie.name }
             />
@@ -26,12 +26,12 @@ const MovieCard_Searching = ( {movie}: {movie: MovieOrTvshowType}) => {
                     <p className='movie-name'>
                         { movie.media_type === 'movie' ? movie.title : movie.name }
                     </p>
-                    <GenresListRow genres={movie?.genre_ids} font_size={10}/>
+                    <GenresListRow genres={movie?.genre_ids} font_size={14}/>
                 </div>
                 <div className="poster-controls-buttons">
-                    <Button_VolumeOff/>
-                    <Button_Like/>
-                    <Button_Dislike/>
+                    <Button_VolumeOff icon_size={14}/>
+                    <Button_Like icon_size={14}/>
+                    <Button_Dislike icon_size={14}/>
                     <Button_SaveInMyList movie={movie} media_type={movie.media_type}/>
                 </div>
             </div>

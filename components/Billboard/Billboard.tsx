@@ -22,7 +22,7 @@ async function Biilboard({media_type}: {media_type: Full_Media_Types}) {
                 priority 
                 alt="Banner image"
             />
-            <Container width='1400'>
+            <Container width={1400}>
                 <div className="banner-content">
                     <h1 className='movie-name'>{ data.media_type === 'movie' ? data.title : data.name}</h1>
                     <p className='movie-overview'>
