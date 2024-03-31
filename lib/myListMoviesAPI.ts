@@ -6,6 +6,11 @@ type saveMovieProps = {
     user_id: string
     movie: TotalMovieAndTvshowType
 }
+type getMovieProp = {
+    user_id: string
+}
+
+
 
 export async function saveMovieInMyList({user_id, movie}: saveMovieProps) {
     if( user_id ) {
@@ -13,3 +18,12 @@ export async function saveMovieInMyList({user_id, movie}: saveMovieProps) {
         await setDoc( doc(db, docRef, movie.id.toString()), movie )
     }
 };
+
+export async function getMyListMovies(user_id: string) {
+    if( user_id ) {
+        const docRef = `MY_LIST_${user_id.slice(0, 8)}`
+        const data = await getDocs(collection(db, docRef))
+        return data.docs.map((doc) => ({...doc.data()}))
+    }
+    
+}

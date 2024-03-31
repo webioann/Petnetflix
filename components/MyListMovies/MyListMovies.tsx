@@ -8,11 +8,10 @@ import { doc, deleteDoc, getDocs, collection } from 'firebase/firestore'
 import { TrendingMoviesType } from '@/types/movies.types' 
 import './my-list.scss'
 
-function MyListMovies() {
+async function MyListMovies() {
 
     const { user } = useContext(UserContext)
     const [myListMovies, setMyListMovies] = useState<TrendingMoviesType[]>([])
-
 
     useEffect(() => {
         if( user?.user_id ) {
@@ -26,9 +25,6 @@ function MyListMovies() {
         }
     }, [])
 
-
-
-
     return (
         <Container width={1200}>
         <div className='wrapper'>
@@ -37,7 +33,7 @@ function MyListMovies() {
             </ul>
         </div>
     </Container>
-)
+    )
 }
 
 export default MyListMovies;
