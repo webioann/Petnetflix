@@ -13,6 +13,7 @@ type PlayVideoParam = {
 const Button_PlayVideo: React.FC<PlayVideoParam> = ({ media_type, movie_id, variant }) => {
 
     const router = useRouter()
+    
     const passParamsAndStartVideo = () => {
         router.push(`/watch/${media_type}/${movie_id}`)
     }
