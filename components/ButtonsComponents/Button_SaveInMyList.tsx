@@ -1,20 +1,21 @@
 'use client'
 import React, { useContext, useState } from 'react'
 import { UserContext } from '../../context/UserContext'
+import { saveMovieInMyList } from '@/lib/saveMovieInMyList'
 import { FaPlus, FaCheck } from 'react-icons/fa6'
 import { db } from '../../firebase.config'
 import { doc, setDoc } from 'firebase/firestore'
-import { IDiscoverMovieOrTvshow, Media_Type, TrendingMoviesType } from '@/types/movies.types'
+import { TotalMovieAndTvshowType, Media_Type, TrendingMoviesType } from '@/types/movies.types'
 import './buttons.scss'
 
 interface ISaveMovieInMyList {
-    movie: TrendingMoviesType | IDiscoverMovieOrTvshow
+    movie: TotalMovieAndTvshowType
     media_type: Media_Type
     title?: string
     icon_size: number
 }
 interface IParamsOnSave {
-    movie: TrendingMoviesType | IDiscoverMovieOrTvshow
+    movie: TotalMovieAndTvshowType
 }
 
 const  Button_SaveInMyList = ({ movie, title, media_type, icon_size }: ISaveMovieInMyList) =>{
@@ -23,11 +24,10 @@ const  Button_SaveInMyList = ({ movie, title, media_type, icon_size }: ISaveMovi
     // const [tooltipTitle, setTooltipTitle] = useState('login for save this movie in My List')
     const { user } = useContext(UserContext)
 
-    const saveMovieInMyList = async({ movie }: IParamsOnSave) => {
-        if(user?.user_id && movie) {
-            let movie_id = movie.id.toString()
-            const docRef = `MY_LIST_${user?.user_id.slice(0, 8)}`
-            await setDoc( doc(db, docRef, movie_id), movie )
+    const saveMovie = async() => {
+        if(user?.user_id) {
+            const user_id = user?.user_id
+            await saveMovieInMyList({user_id, movie})
             setIsSaved(true)
         }
     }
@@ -35,7 +35,7 @@ const  Button_SaveInMyList = ({ movie, title, media_type, icon_size }: ISaveMovi
     if(title) {
         return (
             <button 
-                onClick={() => saveMovieInMyList({movie})}
+                onClick={() => saveMovie()}
                 className='square-button'
                 >
                 <i>{ isSaved && user
@@ -49,7 +49,7 @@ const  Button_SaveInMyList = ({ movie, title, media_type, icon_size }: ISaveMovi
     else {
         return (
             <button 
-                onClick={() => saveMovieInMyList({movie})}
+                onClick={() => saveMovie()}
                 style={{
                     width: `${icon_size * 2}px`,
                     height: `${icon_size * 2}px`,
