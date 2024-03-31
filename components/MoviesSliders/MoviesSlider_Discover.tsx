@@ -1,7 +1,7 @@
 import { SlArrowLeft, SlArrowRight } from 'react-icons/sl'
 import MovieCard_Discover from '../MovieCard/MovieCart_Discover'
 import fetchDiscoverMoviesAndTvshows from '@/lib/fetchDiscoverMoviesAndTvshows'
-import { Media_Type } from '@/types/discover.types'
+import { Media_Type } from '@/types/movies.types'
 import { movies_genres_list, tvshows_genres_list } from '@/data/genresList'
 import './movies-slider.scss'
 

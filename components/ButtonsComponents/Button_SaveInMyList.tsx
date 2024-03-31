@@ -1,10 +1,10 @@
 'use client'
 import React, { useContext, useState } from 'react'
 import { UserContext } from '../../context/UserContext'
-import { saveMovieInMyList } from '@/lib/saveMovieInMyList'
+import { saveMovieInMyList } from '../../lib/myListMoviesAPI'
 import { FaPlus, FaCheck } from 'react-icons/fa6'
-import { db } from '../../firebase.config'
-import { doc, setDoc } from 'firebase/firestore'
+// import { db } from '../../firebase.config'
+// import { doc, setDoc } from 'firebase/firestore'
 import { TotalMovieAndTvshowType, Media_Type, TrendingMoviesType } from '@/types/movies.types'
 import './buttons.scss'
 
