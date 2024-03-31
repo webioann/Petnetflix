@@ -4,19 +4,17 @@ import { UserContext } from '../../context/UserContext'
 import { FaPlus, FaCheck } from 'react-icons/fa6'
 import { db } from '../../firebase.config'
 import { doc, setDoc } from 'firebase/firestore'
-import { IDiscoverMovie } from '@/types/discover.types'
-import { Media_Type } from '@/types/discover.types'
-import type { TrendingResponse, MovieOrTvshowType } from '@/types/trending.types'
+import { IDiscoverMovieOrTvshow, Media_Type, TrendingMoviesType } from '@/types/movies.types'
 import './buttons.scss'
 
 interface ISaveMovieInMyList {
-    movie: MovieOrTvshowType | IDiscoverMovie
+    movie: TrendingMoviesType | IDiscoverMovieOrTvshow
     media_type: Media_Type
     title?: string
     icon_size: number
 }
 interface IParamsOnSave {
-    movie: MovieOrTvshowType | IDiscoverMovie
+    movie: TrendingMoviesType | IDiscoverMovieOrTvshow
 }
 
 const  Button_SaveInMyList = ({ movie, title, media_type, icon_size }: ISaveMovieInMyList) =>{

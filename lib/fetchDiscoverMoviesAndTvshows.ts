@@ -1,5 +1,4 @@
-import type { DiscoverResponse } from '@/types/discover.types'
-import { Media_Type } from '@/types/discover.types'
+import type { DiscoverResponse, Media_Type } from '@/types/movies.types'
 
 export interface IDiscoverMoviesProps {
     media_type: Media_Type

@@ -5,10 +5,10 @@ import Button_Dislike from '../ButtonsComponents/Button_Dislike'
 import Button_SaveInMyList from '../ButtonsComponents/Button_SaveInMyList'
 import GenresListRow from '../GenresList/GenresListRow'
 import Image from "next/image"
-import { MovieOrTvshowType } from '@/types/trending.types'
+import { TrendingMoviesType } from '@/types/movies.types'
 import './movie-card.scss'
 
-const MovieCard_Trending = ( {movie}: {movie: MovieOrTvshowType}) => {
+const MovieCard_Trending = ( {movie}: {movie: TrendingMoviesType}) => {
     
     return (
         <li className='movie-card'>

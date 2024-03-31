@@ -1,4 +1,4 @@
-import type { TrendingResponse, Full_Media_Types } from '@/types/trending.types'
+import type { TrendingResponse, Full_Media_Types } from '@/types/movies.types'
 
 export default async function fetchTrendingMoviesAndTvshows(media_type: Full_Media_Types) {
 

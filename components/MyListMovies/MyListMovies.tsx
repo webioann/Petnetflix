@@ -3,16 +3,15 @@ import React, { useEffect, useState, useContext } from 'react'
 import { UserContext } from '../../context/UserContext'
 import Container from '@/components/Container/Container'
 import MovieCard_Searching from '@/components/MovieCard/MovieCard_Searching'
-
 import { db } from '../../firebase.config'
 import { doc, deleteDoc, getDocs, collection } from 'firebase/firestore'
-import { IMovie } from '@/types/trending.types' 
+import { TrendingMoviesType } from '@/types/movies.types' 
 import './my-list.scss'
 
 function MyListMovies() {
 
     const { user } = useContext(UserContext)
-    const [myListMovies, setMyListMovies] = useState<IMovie[]>([])
+    const [myListMovies, setMyListMovies] = useState<TrendingMoviesType[]>([])
 
 
     useEffect(() => {
@@ -21,7 +20,7 @@ function MyListMovies() {
             const fetchMyList = async () => {
                 const data = await getDocs(collection(db, docRef))
                 let raw = data.docs.map((doc) => ({...doc.data()}))
-                setMyListMovies(raw as IMovie[])
+                setMyListMovies(raw as TrendingMoviesType[])
             }
             fetchMyList();
         }

@@ -1,5 +1,4 @@
-import type { TrendingResponse } from '@/types/trending.types'
-import type { Full_Media_Types } from '@/types/trending.types'
+import type { TrendingResponse, Full_Media_Types } from '@/types/movies.types'
 
 export default async function fetchBillboardData(media_type: Full_Media_Types) {
     // random page number for more variants of posters in Billboar bg image

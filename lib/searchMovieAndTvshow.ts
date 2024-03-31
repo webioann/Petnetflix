@@ -1,4 +1,4 @@
-import type { TrendingResponse } from '@/types/trending.types'
+import type { TrendingResponse } from '@/types/movies.types'
 
 export default async function searchMovieAndTvshow(search_query: string) {
 
