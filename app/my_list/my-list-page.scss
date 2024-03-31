@@ -5,7 +5,10 @@
     min-height: 100vh;
     background-color: $netflix-black;
     color: $light;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    .title{
+        padding: 70px 1rem 70px 1rem;
+    }
 }
