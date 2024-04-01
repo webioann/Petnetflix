@@ -7,13 +7,14 @@ import './navigation.scss'
 const Navigation = () => {
 
     const {user} = useContext(UserContext)
+    const user_id = user?.user_id?.slice(0, 8)
 
     return (
         <nav className='nav'>
             <Link className='nav-link home-link' href={'/browse'}>Home</Link>
             <Link className='nav-link' href={'/tv_shows'}>TV Shows</Link>
             <Link className='nav-link' href={'/movies'}>Movies</Link>
-            { user && <Link className='nav-link' href={'/my_list'}>My List</Link> }
+            { user && <Link className='nav-link' href={`/my_list/${user_id}`}>My List</Link> }
         </nav>
     )
 }

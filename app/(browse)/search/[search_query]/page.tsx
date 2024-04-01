@@ -1,8 +1,4 @@
 import searchMovieAndTvshow from '@/lib/searchMovieAndTvshow'
-import { Media_Type } from '../../../../types/movies.types'
-import Button_CloseVideo from '@/components/ButtonsComponents/Button_CloseVideo'
-import image from '../../../public/login_background.jpg'
-import Image from 'next/image'
 import Container from '@/components/Container/Container'
 import MovieCard_Searching from '@/components/MovieCard/MovieCard_Searching'
 import './search-page.scss'

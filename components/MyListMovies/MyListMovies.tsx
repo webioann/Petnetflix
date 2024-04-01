@@ -2,7 +2,7 @@
 import React, { useEffect, useState, useContext } from 'react'
 import { UserContext } from '../../context/UserContext'
 import Container from '@/components/Container/Container'
-import MovieCard_Searching from '@/components/MovieCard/MovieCard_Searching'
+import MovieCard_MyList from '../MovieCard/MovieCard_MyList'
 import { db } from '../../firebase.config'
 import { doc, deleteDoc, getDocs, collection } from 'firebase/firestore'
 import { TrendingMoviesType } from '@/types/movies.types' 
@@ -29,7 +29,7 @@ function MyListMovies() {
         <Container width={1200}>
         <div className='wrapper'>
             <ul className='my-list-movies'>
-                { myListMovies.map(movie => ( <MovieCard_Searching movie={movie} key={movie.id}/> ))}
+                { myListMovies.map(movie => ( <MovieCard_MyList movie={movie} key={movie.id}/> ))}
             </ul>
         </div>
     </Container>

@@ -1,4 +1,4 @@
-import type { Full_Media_Types, TotalMovieAndTvshowType } from '@/types/movies.types'
+import type { Full_Media_Types, TotalMovieAndTvshowType, IDiscoverMovieOrTvshow } from '@/types/movies.types'
 import { db } from '../firebase.config'
 import { doc, deleteDoc, getDocs, collection, setDoc } from 'firebase/firestore'
 
@@ -12,7 +12,6 @@ type deleteProp = {
 }
 
 
-
 export async function saveMovieInMyList({user_id, movie}: saveMovieProps) {
     if( user_id ) {
         const docRef = `MY_LIST_${user_id.slice(0, 8)}`
@@ -22,10 +21,10 @@ export async function saveMovieInMyList({user_id, movie}: saveMovieProps) {
 
 export async function getMyListMovies(user_id: string) {
     if( user_id ) {
-        const docRef = `MY_LIST_${user_id.slice(0, 8)}`
+        const docRef = `MY_LIST_${user_id}`
         const data = await getDocs(collection(db, docRef))
-        const result = data.docs.map((doc) => ({...doc.data()}))
-        console.log(result)
+        const result = await data.docs.map((doc) => ({...doc.data()}))
+        return result as TotalMovieAndTvshowType[]
     }
 };
 

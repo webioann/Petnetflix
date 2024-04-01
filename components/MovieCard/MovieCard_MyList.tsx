@@ -2,7 +2,7 @@ import Button_PlayVideo from '../ButtonsComponents/Button_PlayVideo'
 import Button_VolumeOff from '../ButtonsComponents/Button_VolumeOff'
 import Button_Like from '../ButtonsComponents/Button_Like'
 import Button_Dislike from '../ButtonsComponents/Button_Dislike'
-import Button_SaveInMyList from '../ButtonsComponents/Button_SaveInMyList'
+import Button_DeleteFromMyList from '@/components/ButtonsComponents/Button_DeleteFromMyList'
 import GenresListRow from '../GenresList/GenresListRow'
 import Image from "next/image"
 import { TrendingMoviesType } from '@/types/movies.types'
@@ -30,9 +30,7 @@ const MovieCard_MyList = ( {movie}: {movie: TrendingMoviesType}) => {
                 </div>
                 <div className="poster-controls-buttons">
                     <Button_VolumeOff icon_size={14}/>
-                    <Button_Like icon_size={14}/>
-                    <Button_Dislike icon_size={14}/>
-                    <Button_SaveInMyList movie={movie} media_type={movie.media_type} icon_size={14}/>
+                    <Button_DeleteFromMyList movie_id_toString={movie.id.toString()} icon_size={14}/>
                 </div>
             </div>
         </li>
