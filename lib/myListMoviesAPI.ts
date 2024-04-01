@@ -6,8 +6,9 @@ type saveMovieProps = {
     user_id: string
     movie: TotalMovieAndTvshowType
 }
-type getMovieProp = {
+type deleteProp = {
     user_id: string
+    movie_id_toString: string
 }
 
 
@@ -25,5 +26,12 @@ export async function getMyListMovies(user_id: string) {
         const data = await getDocs(collection(db, docRef))
         const result = data.docs.map((doc) => ({...doc.data()}))
         console.log(result)
+    }
+};
+
+export async function deletetMovieFromMyList({user_id, movie_id_toString}: deleteProp) {
+    if( user_id ) {
+        const docRef = `MY_LIST_${user_id.slice(0, 8)}`
+        await deleteDoc(doc(db, docRef, movie_id_toString))
     }
 };

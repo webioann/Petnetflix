@@ -5,12 +5,11 @@ import Button_Dislike from '../ButtonsComponents/Button_Dislike'
 import Button_SaveInMyList from '../ButtonsComponents/Button_SaveInMyList'
 import GenresListRow from '../GenresList/GenresListRow'
 import Image from "next/image"
-import { IDiscoverMovie } from '@/types/discover.types'
-import { Media_Type } from '@/types/discover.types'
+import { IDiscoverMovieOrTvshow, Media_Type } from '@/types/movies.types'
 import './movie-card.scss'
 
 interface IMovieCard {
-    movie: IDiscoverMovie
+    movie: IDiscoverMovieOrTvshow
     media_type: Media_Type
 }
 
