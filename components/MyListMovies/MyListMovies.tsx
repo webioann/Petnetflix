@@ -8,7 +8,7 @@ import { doc, deleteDoc, getDocs, collection } from 'firebase/firestore'
 import { TrendingMoviesType } from '@/types/movies.types' 
 import './my-list.scss'
 
-async function MyListMovies() {
+function MyListMovies() {
 
     const { user } = useContext(UserContext)
     const [myListMovies, setMyListMovies] = useState<TrendingMoviesType[]>([])

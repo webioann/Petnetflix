@@ -23,7 +23,7 @@ export async function getMyListMovies(user_id: string) {
     if( user_id ) {
         const docRef = `MY_LIST_${user_id.slice(0, 8)}`
         const data = await getDocs(collection(db, docRef))
-        return data.docs.map((doc) => ({...doc.data()}))
+        const result = data.docs.map((doc) => ({...doc.data()}))
+        console.log(result)
     }
-    
-}
+};
