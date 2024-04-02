@@ -24,7 +24,7 @@ async function SearchPage({params}: {params: {search_query: string}}) {
                 </section>
                 <div className='wrapper'>
                     <ul className='list-searched-movies'>
-                        { searching_results.map(movie => ( <MovieCard movie={movie} key={movie.id}/> ))}
+                        { searching_results.map(movie => ( <MovieCard movie={movie} key={movie.id} useIn='search'/> ))}
                     </ul>
                 </div>
             </Container>

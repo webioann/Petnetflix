@@ -18,7 +18,7 @@ async function MyListPage({params}: myListPageParam) {
                     <h1 className='title'>My list movies</h1>
                     <div className='wrapper'>
                         <ul className='my-list-movies'>
-                            { myListMovies.map(movie => ( <MovieCard movie={movie} key={movie.id}/> ))}
+                            { myListMovies.map(movie => ( <MovieCard movie={movie} key={movie.id} useIn='my-list'/> ))}
                         </ul>
                     </div>
                 </Container>

@@ -30,7 +30,7 @@ async function MoviesSlider_Trending() {
         <section className='slider-container'>
             <h2 className='row-title'>Trending</h2>
             <ul className="row-movies">
-                { movies?.map(movie => ( <MovieCard movie={movie} key={movie.id}/> ))}
+                { movies?.map(movie => ( <MovieCard movie={movie} key={movie.id} useIn='slider'/> ))}
             </ul>
             <div className="arrow-icons-wrapper">
                 {/* <SlArrowLeft className={ isMoved ? 'arrow' : 'hidden-arrow' }
