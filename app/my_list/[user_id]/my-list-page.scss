@@ -5,10 +5,26 @@
     min-height: 100vh;
     background-color: $netflix-black;
     color: $light;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
     .title{
         padding: 70px 1rem 70px 1rem;
+    }
+    .wrapper{
+        display: flex;
+        justify-content: center;
+        .my-list-movies{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 5px;
+        }
+        @media (min-width: 765px) {
+            .my-list-movies{
+                grid-template-columns: repeat(2, 1fr);
+            }    
+        }
+        @media (min-width: 1145px) {
+            .my-list-movies{
+                grid-template-columns: repeat(3, 1fr);
+            }    
+        }
     }
 }
