@@ -1,4 +1,4 @@
-import type { DiscoverResponse, Media_Type } from '@/types/movies.types'
+import type { IServerResponseType, Media_Type } from '@/types/movies.types'
 
 export interface IDiscoverMoviesProps {
     media_type: Media_Type
@@ -16,7 +16,7 @@ export default async function fetchDiscoverMoviesAndTvshows({media_type, genre_i
     })
     if(!serverResponse.ok) throw new Error('Failed to fetch data for Discover movies or TV shows slider')
     // fetch the first 10 results for better app performance (not 20)
-    let result: Promise<DiscoverResponse> = serverResponse.json()
+    let result: Promise<IServerResponseType> = serverResponse.json()
     const results = (await result).results
     const image_exists = results.filter((item) => item.backdrop_path !== null || item.poster_path !== null)
     const firstTenResults = image_exists.filter((item, index) => index < 10)

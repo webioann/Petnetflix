@@ -5,17 +5,17 @@ import { saveMovieInMyList } from '../../lib/myListMoviesAPI'
 import { FaPlus, FaCheck } from 'react-icons/fa6'
 // import { db } from '../../firebase.config'
 // import { doc, setDoc } from 'firebase/firestore'
-import { TotalMovieAndTvshowType, Media_Type, TrendingMoviesType } from '@/types/movies.types'
+import { IMediaType, IResultType } from '@/types/movies.types'
 import './buttons.scss'
 
 interface ISaveMovieInMyList {
-    movie: TotalMovieAndTvshowType
-    media_type: Media_Type
+    movie: IResultType
+    media_type: IMediaType
     title?: string
     icon_size: number
 }
 interface IParamsOnSave {
-    movie: TotalMovieAndTvshowType
+    movie: IResultType
 }
 
 const  Button_SaveInMyList = ({ movie, title, media_type, icon_size }: ISaveMovieInMyList) =>{

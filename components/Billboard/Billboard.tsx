@@ -24,7 +24,7 @@ async function Biilboard({media_type}: {media_type: Full_Media_Types}) {
             />
             <Container width={1400}>
                 <div className="banner-content">
-                    <h1 className='movie-name'>{ data.media_type === 'movie' ? data.title : data.name}</h1>
+                    <h1 className='movie-name'>{ "title" in data ? data.title : data.name }</h1>
                     <p className='movie-overview'>
                         { data.overview.length > 150 ? data.overview.substring(0, 150 - 1) + ' ...' : data.overview }
                     </p> 

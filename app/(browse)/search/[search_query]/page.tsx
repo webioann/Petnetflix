@@ -1,6 +1,6 @@
 import searchMovieAndTvshow from '@/lib/searchMovieAndTvshow'
 import Container from '@/components/Container/Container'
-import MovieCard_Searching from '@/components/MovieCard/MovieCard_Searching'
+import MovieCard from '@/components/MovieCard/MovieCard'
 import './search-page.scss'
 
 async function SearchPage({params}: {params: {search_query: string}}) {
@@ -17,14 +17,14 @@ async function SearchPage({params}: {params: {search_query: string}}) {
                     <ul className='searched-names'>
                         {searching_results.map(item => (
                             <span key={item.id} className='name-item'>
-                                { item.media_type === 'movie' ? item.title : item.name }
+                                { "title" in item ? item.title : item.name }
                             </span>
                         ))}
                     </ul>
                 </section>
                 <div className='wrapper'>
                     <ul className='list-searched-movies'>
-                        { searching_results.map(movie => ( <MovieCard_Searching movie={movie} key={movie.id}/> ))}
+                        { searching_results.map(movie => ( <MovieCard movie={movie} key={movie.id}/> ))}
                     </ul>
                 </div>
             </Container>

@@ -1,11 +1,11 @@
 'use client'
-import { Media_Type } from '../../types/movies.types'
+import { IMediaType } from '../../types/movies.types'
 import { useRouter } from 'next/navigation'
 import { FaPlay } from 'react-icons/fa'
 import './buttons.scss'
 
 type PlayVideoParam = {
-    media_type: Media_Type
+    media_type: IMediaType
     movie_id: number
     variant: 'circle' | 'square'
 }

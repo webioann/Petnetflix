@@ -1,4 +1,4 @@
-import type { TrendingResponse } from '@/types/movies.types'
+import type { IServerResponseType } from '@/types/movies.types'
 
 export default async function searchMovieAndTvshow(search_query: string) {
 
@@ -11,7 +11,7 @@ export default async function searchMovieAndTvshow(search_query: string) {
     })
     if(!serverResponse.ok) throw new Error('Failed to fetch search data')
     // fetch the first 10 results for better app performance (not 20)
-    let result: Promise<TrendingResponse> = serverResponse.json()
+    let result: Promise<IServerResponseType> = serverResponse.json()
     const searching_results = (await result).results
     const media_exists = searching_results.filter((item) => item.media_type === 'movie' || item.media_type === 'tv')
     const image_exists = media_exists.filter((item) => item.backdrop_path !== null || item.poster_path !== null)

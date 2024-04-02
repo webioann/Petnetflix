@@ -1,12 +1,12 @@
 import { SlArrowLeft, SlArrowRight } from 'react-icons/sl'
-import MovieCard_Discover from '../MovieCard/MovieCart_Discover'
+import MovieCard from '../MovieCard/MovieCard'
 import fetchDiscoverMoviesAndTvshows from '@/lib/fetchDiscoverMoviesAndTvshows'
-import { Media_Type } from '@/types/movies.types'
+import { IMediaType } from '@/types/movies.types'
 import { movies_genres_list, tvshows_genres_list } from '@/data/genresList'
 import './movies-slider.scss'
 
 export interface IDiscoverMoviesProps {
-    media_type: Media_Type
+    media_type: IMediaType
     genre_id: number
 }
 
@@ -33,7 +33,7 @@ async function MoviesSlider_Discover({media_type, genre_id}: IDiscoverMoviesProp
         <section className='slider-container'>
             <h2 className='row-title'>{genre}</h2>
             <ul className="row-movies">
-                { movies?.map(movie => ( <MovieCard_Discover movie={movie} media_type={media_type} key={movie.id}/> ))}
+                { movies?.map(movie => ( <MovieCard movie={movie} media_type={media_type} key={movie.id}/> ))}
             </ul>
             <div className="arrow-icons-wrapper">
                 {/* <SlArrowLeft className={ isMoved ? 'arrow' : 'hidden-arrow' }

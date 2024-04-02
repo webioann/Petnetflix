@@ -1,4 +1,4 @@
-import type { TrendingResponse, Full_Media_Types } from '@/types/movies.types'
+import type { IServerResponseType, Full_Media_Types } from '@/types/movies.types'
 
 export default async function fetchTrendingMoviesAndTvshows(media_type: Full_Media_Types) {
 
@@ -11,7 +11,7 @@ export default async function fetchTrendingMoviesAndTvshows(media_type: Full_Med
     })
     if(!serverResponse.ok) throw new Error('Failed to fetch data for Trending movies or TV shows slider')
     // fetch the first 10 results for better app performance (not 20)
-    let result: Promise<TrendingResponse> = serverResponse.json()
+    let result: Promise<IServerResponseType> = serverResponse.json()
     const results = (await result).results
     const firstTenResults = results.filter((item, index) => index < 10)
 

@@ -1,4 +1,4 @@
-import type { TrendingResponse, Full_Media_Types } from '@/types/movies.types'
+import type { IServerResponseType, Full_Media_Types } from '@/types/movies.types'
 
 export default async function fetchBillboardData(media_type: Full_Media_Types) {
     // random page number for more variants of posters in Billboar bg image
@@ -13,7 +13,7 @@ export default async function fetchBillboardData(media_type: Full_Media_Types) {
     })
     if(!serverResponse.ok) throw new Error('Failed to fetch data for Billboard')
     // fetch only one random results
-    let result: Promise<TrendingResponse> = serverResponse.json()
+    let result: Promise<IServerResponseType> = serverResponse.json()
     const results = (await result).results
     const media_exists = results.filter((item) => item.media_type === 'movie' || item.media_type === 'tv')
     const image_exists = media_exists.filter((item) => item.backdrop_path !== null || item.poster_path !== null)

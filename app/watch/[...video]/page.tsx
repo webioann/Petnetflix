@@ -1,12 +1,12 @@
 import getTrailerVideoURL from '@/lib/getTrailerVideoURL'
-import { Media_Type } from '../../../types/movies.types'
+import { IMediaType } from '../../../types/movies.types'
 import Button_CloseVideo from '@/components/ButtonsComponents/Button_CloseVideo'
 import image from '../../../public/login_background.jpg'
 import Image from 'next/image'
 import './watch-page.scss'
 
 type VideoParams = {
-    video: [ Media_Type, number ]
+    video: [ IMediaType, number ]
 }
 
 async function WatchPage({params}: {params: VideoParams}) {
