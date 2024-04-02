@@ -7,46 +7,47 @@ import GenresListRow from '../GenresList/GenresListRow'
 import Image from "next/image"
 import { IResultType, IMediaType } from '@/types/movies.types'
 import './movie-card.scss'
+import './static-card.scss'
 
 type IMovieCardProps = {
     movie: IResultType
     media_type?: IMediaType
+    scalable?: true
 }
 
-const MovieCard = ({ movie, media_type }: IMovieCardProps) => {
+const MovieCard = ({ movie, media_type, scalable }: IMovieCardProps) => {
     const is_movie = "title" in movie;
-    const has_media_type = "media_type" in movie;
 
     return (
-        <li className='movie-card'>
+        <li className={scalable ? 'movie-card' : 'static-card'}>
             <Image 
                 src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path ? movie.backdrop_path : movie.poster_path}`}
                 style={{objectFit: 'cover'}} 
-                width={290}
-                height={163}
+                width={ scalable ? 290 : 375}
+                height={scalable ? 163 : 211}
                 priority 
                 alt={ is_movie ? movie.title : movie.name }
             />
-            <div className="movie-card-controls">
-                <div className="poster-controls-info">
+            <div className={scalable ? 'movie-card-controls' : 'static-card-controls'}>
+                <div className={scalable ? 'movie-controls-info' : 'static-controls-info'}>
                     <Button_PlayVideo 
                         media_type={ media_type ? media_type : movie.media_type! } 
                         movie_id={movie.id} 
                         variant='circle'
                     />
-                    <p className='movie-name'>
+                    <p className={scalable ? 'movie-name' : 'static-name'}>
                         { is_movie ? movie.title : movie.name }
                     </p>
-                    <GenresListRow genres={movie?.genre_ids} font_size={10}/>
+                    <GenresListRow genres={movie?.genre_ids} font_size={scalable ? 10 : 14}/>
                 </div>
-                <div className="poster-controls-buttons">
-                    <Button_VolumeOff icon_size={10}/>
-                    <Button_Like icon_size={10}/>
-                    <Button_Dislike icon_size={10}/>
+                <div className={scalable ? 'movie-controls-buttons' : 'static-controls-buttons'}>
+                    <Button_VolumeOff icon_size={scalable ? 10 : 14}/>
+                    <Button_Like icon_size={scalable ? 10 : 14}/>
+                    <Button_Dislike icon_size={scalable ? 10 : 14}/>
                     <Button_SaveInMyList 
                         movie={movie} 
                         media_type={ media_type ? media_type : movie.media_type! } 
-                        icon_size={10}
+                        icon_size={scalable ? 10 : 14}
                     />
                 </div>
             </div>

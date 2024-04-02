@@ -1,18 +1,18 @@
 @import '../../app/global.scss';
 
-.search-card {
+.static-card {
     transition: all 0.5s linear 0.4s;
     position: relative;
     z-index: 10;
     &:hover {
-        .search-card-controls{
+        .static-card-controls{
             transition: all 0.4s linear 0.1s;
             opacity: 1;
             visibility: visible;
             background-color: $shadow;
         }
     }
-    .search-card-controls{
+    .static-card-controls{
         width: 375px;
         height: 211px;
         position: absolute;
@@ -28,18 +28,18 @@
         background-color: transparent;
         transition: all 0.4s linear;
         z-index: 10;
-        .poster-controls-info {
+        .static-controls-info {
             flex: 1;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            .movie-name{
+            .static-name{
                 font-size: 1.4rem;
                 font-weight: 400;
                 padding-top: 1rem;
             }
         }
-        .poster-controls-buttons {
+        .static-controls-buttons {
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
