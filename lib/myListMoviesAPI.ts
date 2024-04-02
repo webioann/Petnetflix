@@ -1,4 +1,4 @@
-import type { Full_Media_Types, TotalMovieAndTvshowType, IDiscoverMovieOrTvshow } from '@/types/movies.types'
+import type { Full_Media_Types, TotalMovieAndTvshowType, IDiscoverMovieOrTvshow, TrendingMoviesType } from '@/types/movies.types'
 import { db } from '../firebase.config'
 import { doc, deleteDoc, getDocs, collection, setDoc } from 'firebase/firestore'
 
@@ -24,7 +24,7 @@ export async function getMyListMovies(user_id: string) {
         const docRef = `MY_LIST_${user_id}`
         const data = await getDocs(collection(db, docRef))
         const result = await data.docs.map((doc) => ({...doc.data()}))
-        return result as TotalMovieAndTvshowType[]
+        return result as TrendingMoviesType[]
     }
 };
 

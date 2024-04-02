@@ -1,4 +1,4 @@
-type TypeOfVideo =
+type TypeOfVideos =
     | 'Bloopers' 
     | 'Featurette' 
     | 'Behind of Scenes' 
@@ -13,7 +13,7 @@ export interface IVideosData {
     key: string
     site: string
     size: number
-    type: TypeOfVideo
+    type: TypeOfVideos
     official: boolean
     published_at: string
     id: string

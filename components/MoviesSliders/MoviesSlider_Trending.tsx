@@ -8,7 +8,7 @@ import './movies-slider.scss'
 async function MoviesSlider_Trending() {
 
     const movies = await fetchTrendingMoviesAndTvshows('all')
-    // console.log('MOVIES ----> ', movies)
+    // console.log('TRENDING ----> ', movies)
     // const carouselRef = useRef<HTMLUListElement>(null)
     // const [isMoved, setIsMoved] = useState(false)
     // const [rightSliderEnd, setRightSliderEnd] = useState(false)
