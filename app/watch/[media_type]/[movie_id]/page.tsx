@@ -1,18 +1,18 @@
 import getTrailerVideoURL from '@/lib/getTrailerVideoURL'
-import { IMediaType } from '../../../types/movies.types'
+import { IMediaType } from '../../../../types/movies.types'
 import ButtonCloseVideo from '@/components/ButtonsComponents/ButtonCloseVideo'
-import image from '../../../public/login_background.jpg'
+import image from '../../../../public/login_background.jpg'
 import Image from 'next/image'
 import './watch-page.scss'
 
 type VideoParams = {
-    video: [ IMediaType, number ]
+    media_type: IMediaType
+    video_id: number
 }
 
-async function WatchPage({params}: {params: VideoParams}) {
-    const media_type = params.video[0]
-    const movie_id = params.video[1]
-    const url = await getTrailerVideoURL(media_type, movie_id)
+async function WatchPage({params}: {params: {media_type: IMediaType, movie_id: number}}) {
+
+    const url = await getTrailerVideoURL(params.media_type, params.movie_id)
     // console.log('TRAILER ==> ', url)
 
     return (

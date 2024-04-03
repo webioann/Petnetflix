@@ -20,7 +20,7 @@ export default async function fetchBillboardData(media_type: Full_Media_Types) {
     const resultsLength = image_exists.length
     let randomIndex = Math.floor(Math.random() *  resultsLength)
     const filtered = results.filter((item, index) => index == randomIndex)
-    const oneRandomMovie = filtered[0]
+    const oneRandomMovie = filtered.splice(0, 1)[0]
 
     return oneRandomMovie
 };
