@@ -13,7 +13,7 @@ const SignUpWithEmail_authButton: React.FC<IAuthButtonProps> = ({ email, passwor
         // creating new user account with used email and password 
         try {
             await createUserWithEmailAndPassword(auth, email, password)
-            router.push('/brows')
+            router.push('/browse')
         }
         catch(error){
             setWarning(true)

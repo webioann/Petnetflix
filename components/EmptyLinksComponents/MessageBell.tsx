@@ -1,4 +1,3 @@
-'use client'
 import Link from 'next/link'
 import { BsBellFill } from 'react-icons/bs'
 import './fake-links.scss'

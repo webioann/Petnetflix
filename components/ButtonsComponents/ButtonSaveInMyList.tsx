@@ -3,8 +3,6 @@ import React, { useContext, useState } from 'react'
 import { UserContext } from '../../context/UserContext'
 import { saveMovieInMyList } from '../../lib/myListMoviesAPI'
 import { FaPlus, FaCheck } from 'react-icons/fa6'
-// import { db } from '../../firebase.config'
-// import { doc, setDoc } from 'firebase/firestore'
 import { IMediaType, IResultType } from '@/types/movies.types'
 import './buttons.scss'
 
@@ -13,9 +11,6 @@ interface ISaveMovieInMyList {
     media_type: IMediaType
     title?: string
     icon_size: number
-}
-interface IParamsOnSave {
-    movie: IResultType
 }
 
 const  ButtonSaveInMyList = ({ movie, title, media_type, icon_size }: ISaveMovieInMyList) =>{
