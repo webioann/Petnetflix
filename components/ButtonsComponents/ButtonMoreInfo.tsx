@@ -1,7 +1,7 @@
 import { MdInfoOutline } from 'react-icons/md'
 import './buttons.scss'
 
-const Button_MoreInfo = () => {
+const ButtonMoreInfo = () => {
     // mock link button
     return (
         <button className='square-button'>
@@ -11,4 +11,4 @@ const Button_MoreInfo = () => {
     )
 }
 
-export default Button_MoreInfo;
+export default ButtonMoreInfo;

@@ -1,6 +1,6 @@
 import getTrailerVideoURL from '@/lib/getTrailerVideoURL'
 import { IMediaType } from '../../../types/movies.types'
-import Button_CloseVideo from '@/components/ButtonsComponents/Button_CloseVideo'
+import ButtonCloseVideo from '@/components/ButtonsComponents/ButtonCloseVideo'
 import image from '../../../public/login_background.jpg'
 import Image from 'next/image'
 import './watch-page.scss'
@@ -25,7 +25,7 @@ async function WatchPage({params}: {params: VideoParams}) {
                 fill
             />
             <div className='watch-content'>
-                <Button_CloseVideo/>
+                <ButtonCloseVideo/>
                 <div className='video-player'>
                     <iframe
                         width="100%"

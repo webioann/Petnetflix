@@ -3,7 +3,7 @@ import { useRouter } from 'next/navigation'
 import { IoClose } from 'react-icons/io5'
 import './buttons.scss'
 
-const Button_CloseVideo = () => {
+const ButtonCloseVideo = () => {
     const router = useRouter()
 
     return (
@@ -15,4 +15,4 @@ const Button_CloseVideo = () => {
     )
 }
 
-export default Button_CloseVideo;
+export default ButtonCloseVideo;

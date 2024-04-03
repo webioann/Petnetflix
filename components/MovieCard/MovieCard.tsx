@@ -1,9 +1,9 @@
-import Button_PlayVideo from '../ButtonsComponents/Button_PlayVideo'
-import Button_VolumeOff from '../ButtonsComponents/Button_VolumeOff'
-import Button_Like from '../ButtonsComponents/Button_Like'
-import Button_Dislike from '../ButtonsComponents/Button_Dislike'
-import Button_SaveInMyList from '../ButtonsComponents/Button_SaveInMyList'
-import Button_DeleteFromMyList from '../ButtonsComponents/Button_DeleteFromMyList'
+import ButtonPlayVideo from '../ButtonsComponents/ButtonPlayVideo'
+import ButtonVolumeOff from '../ButtonsComponents/ButtonVolumeOff'
+import ButtonLike from '../ButtonsComponents/ButtonLike'
+import ButtonDislike from '../ButtonsComponents/ButtonDislike'
+import ButtonSaveInMyList from '../ButtonsComponents/ButtonSaveInMyList'
+import ButtonDeleteFromMyList from '../ButtonsComponents/ButtonDeleteFromMyList'
 import GenresListRow from '../GenresList/GenresListRow'
 import Image from "next/image"
 import { IResultType, IMediaType } from '@/types/movies.types'
@@ -32,7 +32,7 @@ const MovieCard = ({ movie, media_type, useIn }: IMovieCardProps) => {
                 />
                 <div className='movie-card-controls'>
                     <div className='movie-controls-info'>
-                        <Button_PlayVideo 
+                        <ButtonPlayVideo 
                             media_type={ media_type ? media_type : movie.media_type! } 
                             movie_id={movie.id} 
                             variant='circle'
@@ -43,10 +43,10 @@ const MovieCard = ({ movie, media_type, useIn }: IMovieCardProps) => {
                         <GenresListRow genres={movie?.genre_ids} font_size={10}/>
                     </div>
                     <div className='movie-controls-buttons'>
-                        <Button_VolumeOff icon_size={10}/>
-                        <Button_Like icon_size={10}/>
-                        <Button_Dislike icon_size={10}/>
-                        <Button_SaveInMyList 
+                        <ButtonVolumeOff icon_size={10}/>
+                        <ButtonLike icon_size={10}/>
+                        <ButtonDislike icon_size={10}/>
+                        <ButtonSaveInMyList 
                             movie={movie} 
                             media_type={ media_type ? media_type : movie.media_type! } 
                             icon_size={10}
@@ -70,7 +70,7 @@ const MovieCard = ({ movie, media_type, useIn }: IMovieCardProps) => {
                 />
                 <div className='static-card-controls'>
                     <div className='static-controls-info'>
-                        <Button_PlayVideo 
+                        <ButtonPlayVideo 
                             media_type={ media_type ? media_type : movie.media_type! } 
                             movie_id={movie.id} 
                             variant='circle'
@@ -81,10 +81,10 @@ const MovieCard = ({ movie, media_type, useIn }: IMovieCardProps) => {
                         <GenresListRow genres={movie?.genre_ids} font_size={14}/>
                     </div>
                     <div className='static-controls-buttons'>
-                        <Button_VolumeOff icon_size={14}/>
-                        <Button_Like icon_size={14}/>
-                        <Button_Dislike icon_size={14}/>
-                        <Button_SaveInMyList 
+                        <ButtonVolumeOff icon_size={14}/>
+                        <ButtonLike icon_size={14}/>
+                        <ButtonDislike icon_size={14}/>
+                        <ButtonSaveInMyList 
                             movie={movie} 
                             media_type={ media_type ? media_type : movie.media_type! } 
                             icon_size={14}
@@ -108,7 +108,7 @@ const MovieCard = ({ movie, media_type, useIn }: IMovieCardProps) => {
                 />
                 <div className='static-card-controls'>
                     <div className='static-controls-info'>
-                        <Button_PlayVideo 
+                        <ButtonPlayVideo 
                             media_type={ media_type ? media_type : movie.media_type! } 
                             movie_id={movie.id} 
                             variant='circle'
@@ -119,10 +119,10 @@ const MovieCard = ({ movie, media_type, useIn }: IMovieCardProps) => {
                         <GenresListRow genres={movie?.genre_ids} font_size={14}/>
                     </div>
                     <div className='static-controls-buttons'>
-                        <Button_VolumeOff icon_size={14}/>
-                        <Button_Like icon_size={14}/>
-                        <Button_Dislike icon_size={14}/>
-                        <Button_DeleteFromMyList icon_size={14} movie_id_toString={movie.id.toString()}/>
+                        <ButtonVolumeOff icon_size={14}/>
+                        <ButtonLike icon_size={14}/>
+                        <ButtonDislike icon_size={14}/>
+                        <ButtonDeleteFromMyList icon_size={14} movie_id_toString={movie.id.toString()}/>
                     </div>
                 </div>
             </li>

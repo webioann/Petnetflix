@@ -10,7 +10,7 @@ type PlayVideoParam = {
     variant: 'circle' | 'square'
 }
 
-const Button_PlayVideo: React.FC<PlayVideoParam> = ({ media_type, movie_id, variant }) => {
+const ButtonPlayVideo: React.FC<PlayVideoParam> = ({ media_type, movie_id, variant }) => {
 
     const router = useRouter()
     
@@ -29,4 +29,4 @@ const Button_PlayVideo: React.FC<PlayVideoParam> = ({ media_type, movie_id, vari
     )
 }
 
-export default Button_PlayVideo;
+export default ButtonPlayVideo;

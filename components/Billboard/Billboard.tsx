@@ -1,14 +1,14 @@
 import fetchBillboardData from "@/lib/fetchBillboardData"
 import Image from "next/image"
-import type { Full_Media_Types } from '@/types/movies.types'
+import type { IMediaType } from '@/types/movies.types'
 import Container from "../Container/Container"
-import Button_MoreInfo from "../ButtonsComponents/Button_MoreInfo"
-import Button_PlayVideo from "../ButtonsComponents/Button_PlayVideo"
-import Button_SaveInMyList from "../ButtonsComponents/Button_SaveInMyList"
+import ButtonMoreInfo from "../ButtonsComponents/ButtonMoreInfo"
+import ButtonPlayVideo from "../ButtonsComponents/ButtonPlayVideo"
+import ButtonSaveInMyList from "../ButtonsComponents/ButtonSaveInMyList"
 import GenresListRow from "../GenresList/GenresListRow" 
 import './billboard.scss'
 
-async function Biilboard({media_type}: {media_type: Full_Media_Types}) {
+async function Biilboard({media_type}: {media_type: IMediaType}) {
 
     const data = await fetchBillboardData(media_type) 
     // console.log('BIILBOARD ==> ', data)
@@ -30,9 +30,9 @@ async function Biilboard({media_type}: {media_type: Full_Media_Types}) {
                     </p> 
                     <GenresListRow genres={data.genre_ids} font_size={16}/>
                     <div className="banner-buttons-row">
-                        <Button_PlayVideo media_type={data.media_type} movie_id={data.id} variant='square'/>
-                        <Button_SaveInMyList title='My List' movie={data} media_type={data.media_type} icon_size={25}/>
-                        <Button_MoreInfo/>
+                        <ButtonPlayVideo media_type={media_type} movie_id={data.id} variant='square'/>
+                        <ButtonSaveInMyList title='My List' movie={data} media_type={media_type} icon_size={25}/>
+                        <ButtonMoreInfo/>
                         <div className="spring-div" style={{ flex: 1 }}/> 
                     </div>
                 </div>

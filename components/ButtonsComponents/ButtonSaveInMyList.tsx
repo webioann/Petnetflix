@@ -18,7 +18,7 @@ interface IParamsOnSave {
     movie: IResultType
 }
 
-const  Button_SaveInMyList = ({ movie, title, media_type, icon_size }: ISaveMovieInMyList) =>{
+const  ButtonSaveInMyList = ({ movie, title, media_type, icon_size }: ISaveMovieInMyList) =>{
 
     const [isSaved, setIsSaved] = useState(false)
     // const [tooltipTitle, setTooltipTitle] = useState('login for save this movie in My List')
@@ -65,4 +65,4 @@ const  Button_SaveInMyList = ({ movie, title, media_type, icon_size }: ISaveMovi
     }
 }
 
-export default Button_SaveInMyList
+export default ButtonSaveInMyList;

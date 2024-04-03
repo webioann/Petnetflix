@@ -11,7 +11,7 @@ type buttonProp = {
     movie_id_toString: string
 }
 
-const  Button_SaveInMyList = ({icon_size, movie_id_toString}: buttonProp) =>{
+const  ButtonDeleteFromMyList = ({icon_size, movie_id_toString}: buttonProp) =>{
 
     const { user } = useContext(UserContext)
     const router = useRouter()
@@ -38,4 +38,4 @@ const  Button_SaveInMyList = ({icon_size, movie_id_toString}: buttonProp) =>{
     )
 }
 
-export default Button_SaveInMyList
+export default ButtonDeleteFromMyList;

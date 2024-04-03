@@ -6,7 +6,7 @@ type buttonProp = {
     icon_size: number
 }
 
-const Button_VolumeOff = ({icon_size}: buttonProp) => {
+const ButtonVolumeOff = ({icon_size}: buttonProp) => {
     // mock link button
     return (
         <button 
@@ -21,4 +21,4 @@ const Button_VolumeOff = ({icon_size}: buttonProp) => {
     )
 }
 
-export default Button_VolumeOff;
+export default ButtonVolumeOff;
