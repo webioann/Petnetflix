@@ -15,7 +15,12 @@ const Navigation = () => {
             <Link className='nav-link home-link' href={'/browse'}>Home</Link>
             <Link className='nav-link' href={'/tv_shows'}>TV Shows</Link>
             <Link className='nav-link' href={'/movies'}>Movies</Link>
-            { user && <Link className='nav-link' href={`/my_list/${shorted_user_id}`}>My List</Link> }
+            { user && <Link 
+                className='nav-link'
+                href={`/my_list/${shorted_user_id}`}>
+                    My List
+                </Link> 
+            }
         </nav>
     )
 }
