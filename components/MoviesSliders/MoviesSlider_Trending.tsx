@@ -3,11 +3,16 @@
 import { SlArrowLeft, SlArrowRight } from 'react-icons/sl'
 import MovieCard from '../MovieCard/MovieCard';
 import fetchTrendingMoviesAndTvshows from '@/lib/fetchTrendingMoviesAndTvshows';
+import { Full_Media_Types } from '@/types/movies.types';
 import './movies-slider.scss'
 
-async function MoviesSlider_Trending() {
+type trendingSliderProp = {
+    media_type: Full_Media_Types
+}
 
-    const movies = await fetchTrendingMoviesAndTvshows('all')
+async function MoviesSlider_Trending({media_type}: trendingSliderProp) {
+
+    const movies = await fetchTrendingMoviesAndTvshows(media_type)
     // console.log('TRENDING ----> ', movies)
     // const carouselRef = useRef<HTMLUListElement>(null)
     // const [isMoved, setIsMoved] = useState(false)

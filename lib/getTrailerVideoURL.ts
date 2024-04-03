@@ -1,7 +1,7 @@
 import type { IVideoDataResponse } from "@/types/video.types"
-import { Media_Type } from '../types/movies.types';
+import { IMediaType } from '../types/movies.types';
 
-export default async function getTrailerVideoURL(media_type: Media_Type, movie_id: number) {
+export default async function getTrailerVideoURL(media_type: IMediaType, movie_id: number) {
 
     const serverResponse = await fetch(`https://api.themoviedb.org/3/${media_type}/${movie_id}/videos?language=en-US`, {
         method: 'GET',
@@ -14,7 +14,19 @@ export default async function getTrailerVideoURL(media_type: Media_Type, movie_i
     let response: Promise<IVideoDataResponse> = serverResponse.json()
     const results = (await response).results
     const index = results.findIndex((element ) => element.type === 'Trailer')
-    const key = results[index]?.key
-    
-    return key
+    return results[index]?.key
 };
+
+// let clip_key = '';
+// let teaser_key = '';
+// if(trailer_key) return trailer_key;
+// if(trailer_key === undefined) {
+//     const index = results.findIndex((element ) => element.type === 'Teaser')
+//     teaser_key = results[index]?.key
+//     if(teaser_key) return teaser_key;
+//     if(teaser_key === undefined) {
+//         const index = results.findIndex((element ) => element.type === 'Clip')
+//         clip_key = results[index]?.key
+//         return clip_key
+//     }
+// }

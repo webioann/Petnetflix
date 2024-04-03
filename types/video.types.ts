@@ -5,6 +5,7 @@ type TypeOfVideos =
     | 'Clip' 
     | 'Trailer' 
     | 'Teaser'
+    | 'Opening Credits'
 
 export interface IVideosData {
     iso_639_1: string

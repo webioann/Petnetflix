@@ -1,7 +1,7 @@
-import type { IServerResponseType, Media_Type } from '@/types/movies.types'
+import type { IServerResponseType, IMediaType } from '@/types/movies.types'
 
 export interface IDiscoverMoviesProps {
-    media_type: Media_Type
+    media_type: IMediaType
     genre_id: number
 }
 

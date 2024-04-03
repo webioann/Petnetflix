@@ -13,6 +13,7 @@ async function WatchPage({params}: {params: VideoParams}) {
     const media_type = params.video[0]
     const movie_id = params.video[1]
     const url = await getTrailerVideoURL(media_type, movie_id)
+    // console.log('TRAILER ==> ', url)
 
     return (
         <main className="watch-page">
