@@ -18,7 +18,7 @@ export async function saveMovieInMyList({user_id, movie}: saveMovieProps) {
         await setDoc( doc(db, docRef, movie.id.toString()), movie )
     }
 };
-
+// user_id passed from Navigation was shorted before passing in MyList
 export async function getMyListMovies(user_id: string) {
     if( user_id ) {
         const docRef = `MY_LIST_${user_id}`

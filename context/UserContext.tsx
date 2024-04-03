@@ -2,7 +2,7 @@
 import React, { useEffect, useState, createContext, ReactNode } from 'react'
 import { onAuthStateChanged } from "firebase/auth"
 import { auth } from '../firebase.config'
-import { signOut } from "firebase/auth"
+// import { signOut } from "firebase/auth"
 
 interface IUser {
     name: string | null
@@ -42,7 +42,6 @@ const UserContextProvider = ({ children }: {children: ReactNode}) => {
                 setUser(null)
             }
         })
-        return () => {signOut(auth)}
     }, [auth])
     
     return (
