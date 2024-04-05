@@ -30,7 +30,7 @@ const LoginWithEmail_authButton: React.FC<IAuthButtonProps> = ({ email, password
     }
 
     return (
-        <button className='auth-button' onClick={loginWithEmail}>
+        <button className='auth-button in-top' onClick={loginWithEmail}>
             Login with email
         </button>
     )
