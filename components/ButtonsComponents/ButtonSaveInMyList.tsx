@@ -35,7 +35,7 @@ const  ButtonSaveInMyList = ({ movie, title, media_type, icon_size }: ISaveMovie
                 >
                 <i>{ isSaved && user
                     ? <FaCheck size={18} color='#fff' title='this movie saved in My List'/> 
-                    : <FaPlus size={18} color='#fff' title='save in My List'/>}
+                    : <FaPlus size={18} color='#fff' title='register for save in My List'/>}
                 </i>
                 { title }
             </button>
@@ -53,7 +53,7 @@ const  ButtonSaveInMyList = ({ movie, title, media_type, icon_size }: ISaveMovie
                 >
                 <i>{ isSaved && user
                     ? <FaCheck size={icon_size} color='#fff' title='this movie saved in My List'/> 
-                    : <FaPlus size={icon_size} color='#fff' title='save in My List'/>}
+                    : <FaPlus size={icon_size} color='#fff' title='register for save in My List'/>}
                 </i>
             </button>
         )
