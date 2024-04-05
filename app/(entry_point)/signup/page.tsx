@@ -6,7 +6,7 @@ import styles from '../register_pages.module.scss'
 function SignupPage() {
     return (
         <section className={styles.register_page}>
-            <h1 className={styles.auth_header}>Sign up</h1>
+            <h1 className={styles.auth_header}>Sign Up</h1>
             <RegistrationForm variant='signup'/>
             <div className={styles.question}>
                 <p className={styles.question_text}>Already have an account ?</p>

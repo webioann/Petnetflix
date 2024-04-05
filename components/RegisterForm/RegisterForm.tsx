@@ -24,11 +24,11 @@ const RegistrationForm:React.FC<FormProps> = ({variant}) => {
         // if type="signup" work one function if "login" other
         <form className='form' onSubmit={(event) => event.preventDefault() }>
              {/* EMAIL */}
-            <div className='email-box'>
+            <div className='form-item'>
                 <label className={emailFocus || email.length > 0 ? 'input-label-up' : 'input-label'}>
                     Email
                 </label>
-                <div className='email-input-box'>
+                <div className='input-box'>
                     <input className='reg-input'
                         onFocus={() => {
                             setEmailFocus(true)
@@ -43,11 +43,11 @@ const RegistrationForm:React.FC<FormProps> = ({variant}) => {
                 </div>
             </div>
             {/* PASSWORD */}
-            <div className='password-box'>
+            <div className='form-item'>
                 <label className={passwordFocus || password.length > 0 ? 'input-label-up' : 'input-label'}>
                     Password
                 </label>
-                <div className='password-input-box'>
+                <div className='input-box'>
                     <input className='reg-input'
                         onFocus={() => {
                             setPasswordFocus(true)

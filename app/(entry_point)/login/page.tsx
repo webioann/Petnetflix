@@ -7,7 +7,7 @@ import styles from '../register_pages.module.scss'
 function LoginPage() {
     return (
         <section className={styles.register_page}>
-            <h1 className={styles.auth_header}>Login</h1>
+            <h1 className={styles.auth_header}>Sign In</h1>
             <RegistrationForm variant='login'/>
             <div className={styles.question}>
                 <p className={styles.question_text}>New to Netflix?</p>
