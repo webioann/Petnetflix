@@ -8,12 +8,11 @@ import './buttons.scss'
 
 interface ISaveMovieInMyList {
     movie: IResultType
-    media_type: IMediaType
     title?: string
     icon_size: number
 }
 
-const  ButtonSaveInMyList = ({ movie, title, media_type, icon_size }: ISaveMovieInMyList) =>{
+const  ButtonSaveInMyList = ({ movie, title, icon_size }: ISaveMovieInMyList) =>{
 
     const [isSaved, setIsSaved] = useState(false)
     // const [tooltipTitle, setTooltipTitle] = useState('login for save this movie in My List')

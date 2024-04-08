@@ -5,11 +5,6 @@ import image from '../../../../public/login_background.jpg'
 import Image from 'next/image'
 import './watch-page.scss'
 
-type VideoParams = {
-    media_type: IMediaType
-    video_id: number
-}
-
 async function WatchPage({params}: {params: {media_type: IMediaType, movie_id: number}}) {
 
     const url = await getTrailerVideoURL(params.media_type, params.movie_id)

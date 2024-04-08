@@ -32,7 +32,7 @@ async function MoviesSlider_Discover({media_type, genre_id}: IDiscoverMoviesProp
         <section className='slider-container'>
             <h2 className='row-title'>{genre}</h2>
             <ul className="row-movies">
-                { movies?.map(movie => ( <MovieCard movie={movie} media_type={media_type} key={movie.id} useIn='slider'/> ))}
+                { movies?.map(movie => ( <MovieCard movie={movie} key={movie.id} useIn='slider'/> ))}
             </ul>
         </section>
     )

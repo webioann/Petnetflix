@@ -13,7 +13,7 @@ export interface IMovieType {
     vote_average: number
     vote_count: number
     // media_type in "/discover" does not exist
-    media_type?: 'movie' | 'tv'
+    media_type: 'movie' | 'tv'
     title: string 
     original_title: string 
     release_date: string 
@@ -31,17 +31,24 @@ export interface ITvshowType {
     vote_average: number
     vote_count: number
     // media_type in "/discover" does not exist
-    media_type?: 'movie' | 'tv'
+    media_type: 'movie' | 'tv'
     name: string 
     original_name: string 
     first_air_date: string 
     origin_country: string[] 
 }
 // MIX OF ===========================================
-export type IResultType = IMovieType | ITvshowType
+export type IResultType = IMovieType | ITvshowType 
+export type IDiscoverResultType = Omit<IMovieType, "media_type"> | Omit<ITvshowType, "media_type">
 export interface IServerResponseType {
     page: number
     results: IResultType[]
+    total_pages: number
+    total_results: number
+}
+export interface IServerDiscoverResponseType {
+    page: number
+    results: IDiscoverResultType[]
     total_pages: number
     total_results: number
 }

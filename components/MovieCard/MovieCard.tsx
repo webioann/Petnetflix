@@ -6,17 +6,16 @@ import ButtonSaveInMyList from '../ButtonsComponents/ButtonSaveInMyList'
 import ButtonDeleteFromMyList from '../ButtonsComponents/ButtonDeleteFromMyList'
 import GenresListRow from '../GenresList/GenresListRow'
 import Image from "next/image"
-import { IResultType, IMediaType } from '@/types/movies.types'
+import { IResultType } from '@/types/movies.types'
 import './movie-card.scss'
 import './static-card.scss'
 
 type IMovieCardProps = {
     movie: IResultType
-    media_type?: IMediaType
     useIn: 'slider' | 'my-list' | 'search'
 }
 
-const MovieCard = ({ movie, media_type, useIn }: IMovieCardProps) => {
+const MovieCard = ({ movie, useIn }: IMovieCardProps) => {
     const is_movie = "title" in movie;
 
     if( useIn === 'slider' ) {  
@@ -33,7 +32,7 @@ const MovieCard = ({ movie, media_type, useIn }: IMovieCardProps) => {
                 <div className='movie-card-controls'>
                     <div className='movie-controls-info'>
                         <ButtonPlayVideo 
-                            media_type={ media_type ? media_type : movie.media_type! } 
+                            media_type={ movie.media_type! } 
                             movie_id={movie.id} 
                             variant='circle'
                         />
@@ -48,7 +47,6 @@ const MovieCard = ({ movie, media_type, useIn }: IMovieCardProps) => {
                         <ButtonDislike icon_size={10}/>
                         <ButtonSaveInMyList 
                             movie={movie} 
-                            media_type={ media_type ? media_type : movie.media_type! } 
                             icon_size={10}
                         />
                     </div>
@@ -71,7 +69,7 @@ const MovieCard = ({ movie, media_type, useIn }: IMovieCardProps) => {
                 <div className='static-card-controls'>
                     <div className='static-controls-info'>
                         <ButtonPlayVideo 
-                            media_type={ media_type ? media_type : movie.media_type! } 
+                            media_type={ movie.media_type } 
                             movie_id={movie.id} 
                             variant='circle'
                         />
@@ -86,7 +84,6 @@ const MovieCard = ({ movie, media_type, useIn }: IMovieCardProps) => {
                         <ButtonDislike icon_size={14}/>
                         <ButtonSaveInMyList 
                             movie={movie} 
-                            media_type={ media_type ? media_type : movie.media_type! } 
                             icon_size={14}
                         />
                     </div>
@@ -109,7 +106,7 @@ const MovieCard = ({ movie, media_type, useIn }: IMovieCardProps) => {
                 <div className='static-card-controls'>
                     <div className='static-controls-info'>
                         <ButtonPlayVideo 
-                            media_type={ media_type ? media_type : movie.media_type! } 
+                            media_type={ movie.media_type } 
                             movie_id={movie.id} 
                             variant='circle'
                         />
