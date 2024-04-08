@@ -1,20 +1,20 @@
 import React from 'react'
 import Link from 'next/link'
 import RegistrationForm from '../../../components/RegisterForm/RegisterForm'
-import styles from '../register_pages.module.scss'
+import '../register_pages.scss'
 
 function SignupPage() {
     return (
-        <section className={styles.register_page}>
-            <h1 className={styles.auth_header}>Sign Up</h1>
+        <section className='register_page'>
+            <h1 className='auth_header'>Sign Up</h1>
             <RegistrationForm variant='signup'/>
-            <div className={styles.question}>
-                <p className={styles.question_text}>Already have an account ?</p>
-                <Link href="/login" className={`${styles.question_link} ${styles.link}`}>Login now.</Link> 
+            <div className='question'>
+                <p className='question_text'>Already have an account ?</p>
+                <Link href="/login" className='question_link link'>Login now.</Link> 
             </div>
-            <p className={styles.captcha}>
+            <p className='captcha'>
                 This page is protected by Google reCAPTCHA to ensure you're not a bot. 
-                <span className={`${styles.captcha_link} ${styles.link}`}>Learn more.</span> 
+                <span className='captcha_link styles.link'>Learn more.</span> 
             </p>
 
         </section>

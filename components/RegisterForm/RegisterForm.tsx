@@ -70,13 +70,13 @@ const RegistrationForm:React.FC<FormProps> = ({variant}) => {
                     setWarning={setWarning}
                     setError={setError}
                 />}
-                { variant === 'signup' && <SignUpWithEmail_authButton 
-                    email={email} 
-                    password={password} 
-                    setWarning={setWarning}
-                    setError={setError}
-                />}
-                <GoogleSignIn_authButton/>
+            { variant === 'signup' && <SignUpWithEmail_authButton 
+                email={email} 
+                password={password} 
+                setWarning={setWarning}
+                setError={setError}
+            />}
+            <GoogleSignIn_authButton/>
         </form>
     )
 }
