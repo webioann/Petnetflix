@@ -9,7 +9,7 @@ export default async function fetchBillboardData(media_type: Full_Media_Types) {
         headers: {
             accept: 'application/json',
             Authorization: process.env.TMDB_KEY as string
-        }
+        },
     })
     if(!serverResponse.ok) throw new Error('Failed to fetch data for Billboard')
     let result: Promise<IServerResponseType> = serverResponse.json()
