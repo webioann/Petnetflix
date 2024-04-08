@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import { GoSearch } from 'react-icons/go'
 import { IoClose } from 'react-icons/io5'

@@ -6,7 +6,7 @@ import Image from 'next/image'
 import './watch-page.scss'
 
 async function WatchPage({params}: {params: {media_type: IMediaType, movie_id: number}}) {
-
+    // params added on click ButtonPlayVideo --> router.push(`/watch/${media_type}/${movie_id}`)
     const url = await getTrailerVideoURL(params.media_type, params.movie_id)
     // console.log('TRAILER ==> ', url)
 

@@ -11,8 +11,7 @@ import Container from "../../components/Container/Container";
 import  './browse.scss'
 
 async function BrowseLayout ({ children }: { children: ReactNode }) {
-    // const session = await getServerSession(authOptions)
-    // if (session) redirect("/");
+    
     return (
         <main className='browse-layout'>
             <Container width={1400}>

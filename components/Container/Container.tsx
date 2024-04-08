@@ -1,6 +1,7 @@
 import { ReactNode} from 'react'
 
 const Container = ({ width, children }: { children: ReactNode; width: number }) => {
+    
     return (
         <div style={{
             width: '100%',

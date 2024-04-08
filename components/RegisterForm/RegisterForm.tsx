@@ -23,7 +23,7 @@ const RegistrationForm:React.FC<FormProps> = ({variant}) => {
     return (
         // if type="signup" work one function if "login" other
         <form className='form' onSubmit={(event) => event.preventDefault() }>
-             {/* EMAIL */}
+            {/* EMAIL */}
             <div className='form-item'>
                 <label className={emailFocus || email.length > 0 ? 'input-label-up' : 'input-label'}>
                     Email

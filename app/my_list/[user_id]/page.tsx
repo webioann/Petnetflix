@@ -27,7 +27,6 @@ async function MyListPage({params}: myListPageParam) {
                 </Container>
             </main>
         )
-    
     }
 }
 

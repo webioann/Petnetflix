@@ -37,15 +37,16 @@ export interface ITvshowType {
     first_air_date: string 
     origin_country: string[] 
 }
-// MIX OF ===========================================
+// types for TRENDING response (which includes "media_type")
 export type IResultType = IMovieType | ITvshowType 
-export type IDiscoverResultType = Omit<IMovieType, "media_type"> | Omit<ITvshowType, "media_type">
 export interface IServerResponseType {
     page: number
     results: IResultType[]
     total_pages: number
     total_results: number
 }
+// types for DISCOVER response (without "media_type" in results array)
+export type IDiscoverResultType = Omit<IMovieType, "media_type"> | Omit<ITvshowType, "media_type">
 export interface IServerDiscoverResponseType {
     page: number
     results: IDiscoverResultType[]

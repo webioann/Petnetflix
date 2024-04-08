@@ -1,6 +1,7 @@
 import './auth-footer.scss'
 
 const AuthPageFooter = () => {
+    // footer with mock links
     return (
         <footer className='auth-footer'>
             <div className="auth-footer-content">

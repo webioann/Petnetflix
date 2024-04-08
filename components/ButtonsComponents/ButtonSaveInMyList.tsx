@@ -3,7 +3,7 @@ import React, { useContext, useState } from 'react'
 import { UserContext } from '../../context/UserContext'
 import { saveMovieInMyList } from '../../lib/myListMoviesAPI'
 import { FaPlus, FaCheck } from 'react-icons/fa6'
-import { IMediaType, IResultType } from '@/types/movies.types'
+import { IResultType } from '@/types/movies.types'
 import './buttons.scss'
 
 interface ISaveMovieInMyList {
@@ -15,7 +15,6 @@ interface ISaveMovieInMyList {
 const  ButtonSaveInMyList = ({ movie, title, icon_size }: ISaveMovieInMyList) =>{
 
     const [isSaved, setIsSaved] = useState(false)
-    // const [tooltipTitle, setTooltipTitle] = useState('login for save this movie in My List')
     const { user } = useContext(UserContext)
 
     const saveMovie = async() => {

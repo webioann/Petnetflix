@@ -20,6 +20,7 @@ export default async function fetchDiscoverMoviesAndTvshows({media_type, genre_i
     const results = (await result).results
     const image_exists = results.filter((item) => item.backdrop_path !== null || item.poster_path !== null)
     const firstTenResults = image_exists.filter((item, index) => index < 10)
+    // in this server response "media_type" does not exist, and i am added this key manually
     const addInObjectKeyMediaType = firstTenResults.map((item) => {
         return {
             ...item,

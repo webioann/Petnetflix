@@ -11,7 +11,6 @@ type deleteProp = {
     movie_id_toString: string
 }
 
-
 export async function saveMovieInMyList({user_id, movie}: saveMovieProps) {
     if( user_id ) {
         const docRef = `MY_LIST_${user_id.slice(0, 8)}`

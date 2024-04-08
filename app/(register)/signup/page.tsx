@@ -1,9 +1,9 @@
-import React from 'react'
 import Link from 'next/link'
 import RegistrationForm from '../../../components/RegisterForm/RegisterForm'
 import '../register_pages.scss'
 
 function SignupPage() {
+
     return (
         <section className='register_page'>
             <h1 className='auth_header'>Sign Up</h1>
@@ -16,7 +16,6 @@ function SignupPage() {
                 This page is protected by Google reCAPTCHA to ensure you're not a bot. 
                 <span className='captcha_link styles.link'>Learn more.</span> 
             </p>
-
         </section>
     )
 }

@@ -8,7 +8,7 @@ import ButtonSaveInMyList from "../ButtonsComponents/ButtonSaveInMyList"
 import GenresListRow from "../GenresList/GenresListRow" 
 import './billboard.scss'
 
-async function Biilboard({media_type}: {media_type: IMediaType}) {
+async function Billboard({media_type}: {media_type: IMediaType}) {
 
     const data = await fetchBillboardData(media_type) 
     // console.log('BIILBOARD ==> ', data)
@@ -31,7 +31,7 @@ async function Biilboard({media_type}: {media_type: IMediaType}) {
                     <GenresListRow genres={data.genre_ids} font_size={16}/>
                     <div className="banner-buttons-row">
                         <ButtonPlayVideo media_type={media_type} movie_id={data.id} variant='square'/>
-                        <ButtonSaveInMyList title='My List' movie={data} media_type={media_type} icon_size={25}/>
+                        <ButtonSaveInMyList title='My List' movie={data} icon_size={25}/>
                         <ButtonMoreInfo/>
                         <div className="spring-div" style={{ flex: 1 }}/> 
                     </div>
@@ -42,4 +42,4 @@ async function Biilboard({media_type}: {media_type: IMediaType}) {
     )
 }
 
-export default Biilboard;
+export default Billboard;

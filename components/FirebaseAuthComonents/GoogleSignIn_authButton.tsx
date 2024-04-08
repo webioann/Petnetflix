@@ -1,3 +1,4 @@
+'use client'
 import { useRouter } from 'next/navigation'
 import { auth, provider } from '../../firebase.config'
 import { signInWithPopup } from "firebase/auth"
