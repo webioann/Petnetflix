@@ -3,8 +3,8 @@
  🚀 **[THIS IS A LINK TO THE WORKING APP](https://petnetflix.vercel.app/)** 🚀
 
 
-![next](https://img.shields.io/badge/next-green.svg?style=flat&logo=react&logoColor=red)&nbsp;
-![react](https://img.shields.io/badge/react-blue.svg?style=flat&logo=react&logoColor=white)&nbsp;
+![next](https://img.shields.io/badge/Next_JS-green.svg?style=flat&logo=react&logoColor=red)&nbsp;
+![react](https://img.shields.io/badge/React_JS-blue.svg?style=flat&logo=react&logoColor=white)&nbsp;
 ![typescript](https://img.shields.io/badge/typescript-%231572B6.svg?style=flat&logo=typescript&logoColor=white)&nbsp;
 ![firebase](https://img.shields.io/badge/firebase-%23323330?style=flat&logo=Firebase&logoColor=#FFCA28)&nbsp;
 ![app-router](https://img.shields.io/badge/app_router-CA4245?style=flat&logo=react-router&logoColor=white)&nbsp;
