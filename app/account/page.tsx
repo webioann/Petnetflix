@@ -1,16 +1,11 @@
+'use client'
 import React, { useContext } from 'react'
-// import UserAvatar from '../components/UserAvatar'
-// import { UserContext } from '../hooks/USER_CONTEXT_PROVIDER'
+import { UserContext } from '../../context/UserContext'
 import './account.scss'
 
 const Account_Page = () => {
-    // FIXME: user must be from contex 
-    const user = {
-        email: 'example@gmail.com',
-        name: 'USER'
-    }
 
-    // const { user } = useContext(UserContext)
+    const { user } = useContext(UserContext)
 
     return (
         <main className='account-page'>
@@ -34,7 +29,7 @@ const Account_Page = () => {
                             <a className='mock-link'>Change password</a>
                         </div>
                         <div className='block full phone with-border'>
-                            <p className='user-info'>Phone: 096 842 25 72</p>
+                            <p className='user-info'>Phone: 096 840 20 70</p>
                             <a className='mock-link'>Change phone number</a>
                         </div>
                         <div className='block full billing-date'>
