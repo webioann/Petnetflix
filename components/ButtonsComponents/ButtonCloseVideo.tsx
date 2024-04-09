@@ -8,7 +8,10 @@ const ButtonCloseVideo = () => {
 
     return (
         <div className='close-button'>
-            <span onClick={() => router.back()} className='close-icon-box'>
+            <span onClick={() => {
+                router.back()
+                router.refresh()}} 
+                className='close-icon-box'>
                 <IoClose color='red' size={25}/>
             </span>
         </div>
