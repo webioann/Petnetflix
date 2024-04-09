@@ -1,6 +1,8 @@
 'use client'
 import React, { useContext, useState } from 'react'
 import { UserContext } from '../../context/UserContext'
+import { useRouter } from 'next/navigation'
+
 import { saveMovieInMyList } from '../../lib/myListMoviesAPI'
 import { FaPlus, FaCheck } from 'react-icons/fa6'
 import { IResultType } from '@/types/movies.types'
@@ -16,12 +18,14 @@ const  ButtonSaveInMyList = ({ movie, title, icon_size }: ISaveMovieInMyList) =>
 
     const [isSaved, setIsSaved] = useState(false)
     const { user } = useContext(UserContext)
+    const router = useRouter()
 
     const saveMovie = async() => {
         if(user?.user_id) {
             const user_id = user?.user_id
             await saveMovieInMyList({user_id, movie})
             setIsSaved(true)
+            router.refresh()
         }
     }
 
