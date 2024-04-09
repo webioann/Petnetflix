@@ -11,7 +11,6 @@ import './billboard.scss'
 async function Billboard({media_type}: {media_type: IMediaType}) {
 
     const data = await fetchBillboardData(media_type) 
-    // console.log('BIILBOARD ==> ', data)
 
     return (
         <section className='banner-container'>
