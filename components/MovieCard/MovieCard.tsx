@@ -124,9 +124,7 @@ const MovieCard = ({ movie, useIn }: IMovieCardProps) => {
                 </div>
             </li>
         )
-    
     }
-
 }
 
 export default MovieCard;
