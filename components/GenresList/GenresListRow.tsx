@@ -12,7 +12,7 @@ function GenresListRow({genres, font_size}: {genres:  number[], font_size: numbe
                 paddingTop: `${font_size / 2}px`,
             }}
             >
-            {genres.map((item) => (
+            {genres.slice(0, 3).map((item) => (
                 <li className='genre-item'
                     style={{
                         display: 'flex',
