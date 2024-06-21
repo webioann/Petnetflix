@@ -1,7 +1,7 @@
 'use client'
 import React, { useContext } from 'react'
 import { UserContext } from '../../context/UserContext'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import './navigation.scss'
 
@@ -11,6 +11,7 @@ const Navigation = () => {
     // slice user id and pass as params in MyListPage component (user_id it is document ref in Firebase store DB)
     const shorted_user_id = user?.user_id?.slice(0, 8)
     const pathname = usePathname()
+    const router = useRouter()
 
     return (
         <nav className='nav'>

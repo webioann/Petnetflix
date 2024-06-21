@@ -2,7 +2,6 @@
 import React, { useContext, useState } from 'react'
 import { UserContext } from '../../context/UserContext'
 import { useRouter } from 'next/navigation'
-
 import { saveMovieInMyList } from '../../lib/myListMoviesAPI'
 import { FaPlus, FaCheck } from 'react-icons/fa6'
 import { IResultType } from '@/types/movies.types'
@@ -15,7 +14,7 @@ interface ISaveMovieInMyList {
 }
 
 const  ButtonSaveInMyList = ({ movie, title, icon_size }: ISaveMovieInMyList) =>{
-
+    // save movie data on MY_LIST collection
     const [isSaved, setIsSaved] = useState(false)
     const { user } = useContext(UserContext)
     const router = useRouter()

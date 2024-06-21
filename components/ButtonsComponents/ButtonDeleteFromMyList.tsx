@@ -12,7 +12,7 @@ type buttonProp = {
 }
 
 const  ButtonDeleteFromMyList = ({icon_size, movie_id_toString}: buttonProp) =>{
-
+    // remove movie from MyList page and MY_LIST colection on Firebase
     const { user } = useContext(UserContext)
     const router = useRouter()
 

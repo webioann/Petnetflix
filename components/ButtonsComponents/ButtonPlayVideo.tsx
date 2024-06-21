@@ -11,7 +11,7 @@ type PlayVideoParam = {
 }
 
 const ButtonPlayVideo: React.FC<PlayVideoParam> = ({ media_type, movie_id, variant }) => {
-
+    // to start playing the chosen video on page "watch" but firstly get the video URL for Youtube
     const router = useRouter()
     
     const passParamsAndStartVideo = () => {

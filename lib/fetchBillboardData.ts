@@ -5,11 +5,13 @@ export default async function fetchBillboardData(media_type: Full_Media_Types) {
     const page_number = await Math.floor(Math.random() * 3) + 1;
 
     const serverResponse = await fetch(`https://api.themoviedb.org/3/trending/${media_type}/week?language=en-US&page=${page_number}`, {
+        // next: { revalidate: 30 },
         method: 'GET',
         headers: {
             accept: 'application/json',
             Authorization: process.env.TMDB_KEY as string
         },
+        cache: 'no-store'
     })
     if(!serverResponse.ok) throw new Error('Failed to fetch data for Billboard')
     let result: Promise<IServerResponseType> = serverResponse.json()

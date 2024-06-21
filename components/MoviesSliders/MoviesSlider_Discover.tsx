@@ -10,7 +10,7 @@ export interface IDiscoverMoviesProps {
 }
 
 async function MoviesSlider_Discover({media_type, genre_id}: IDiscoverMoviesProps) {
-
+    // movies slider with sort by genre
     const movies = await fetchDiscoverMoviesAndTvshows({media_type, genre_id})
     
     const findGenreNameById = (genre_id: number) => {

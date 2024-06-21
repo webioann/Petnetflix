@@ -8,7 +8,7 @@ type trendingSliderProp = {
 }
 
 async function MoviesSlider_Trending({media_type}: trendingSliderProp) {
-
+    // trending movies slider (without genres)
     const movies = await fetchTrendingMoviesAndTvshows(media_type)
 
     return (

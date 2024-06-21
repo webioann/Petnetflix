@@ -12,12 +12,14 @@ const NetflixLogo = () => {
     return (
         <>
             <Link href={'/'} className='netflix-logo'>
+                {/* logo for screens more 640px */}
                 <Image 
                     className='logo logo-big'
                     width={100}
                     height={30} 
                     src={LOGO_BIG} 
                     alt="Netflix logo"/>
+                {/* logo for mobile screens ( less 640px )*/}
                 <Image 
                     className='logo logo-mobile'
                     width={24} 

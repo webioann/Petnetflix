@@ -16,7 +16,7 @@ const NavigationHeader = ({ children }: {children: ReactNode}) => {
             setFadedNavbar(true)
         } 
     }
-
+    // when start scroll add black background for navbar
     useEffect(() => {
         window.addEventListener('scroll', fadeNavbarBg)
         return () => {window.removeEventListener('scroll', fadeNavbarBg)}

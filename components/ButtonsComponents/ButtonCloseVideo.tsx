@@ -5,11 +5,10 @@ import './buttons.scss'
 
 const ButtonCloseVideo = () => {
     const router = useRouter()
-
+    // just close video player and go back
     return (
         <div className='close-button'>
             <span onClick={() => {
-                router.refresh()
                 router.back()}} 
                 className='close-icon-box'>
                 <IoClose color='red' size={25}/>

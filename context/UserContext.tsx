@@ -14,7 +14,7 @@ type UserContextType = {
 }
 
 export const UserContext = createContext<UserContextType>({  user: null })
-
+// Firebase Authentication creates a logged user and their pass in a context
 const UserContextProvider = ({ children }: {children: ReactNode}) => {
 
     const [user, setUser] = useState<IUser | null>(null) 

@@ -16,6 +16,7 @@ type IMovieCardProps = {
 }
 
 const MovieCard = ({ movie, useIn }: IMovieCardProps) => {
+    // three variants of movie card 1) use in sliders 2) use in search page 3) use in MyList and have a delete button
     const is_movie = "title" in movie;
 
     if( useIn === 'slider' ) {  
