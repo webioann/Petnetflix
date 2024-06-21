@@ -8,7 +8,7 @@ import './watch-page.scss'
 async function WatchPage({params}: {params: {media_type: IMediaType, movie_id: number}}) {
     // params added on click ButtonPlayVideo --> router.push(`/watch/${media_type}/${movie_id}`)
     const url = await getTrailerVideoURL(params.media_type, params.movie_id)
-    // console.log('TRAILER ==> ', url)
+    // url - YouTube video URL, it need for play video
 
     return (
         <main className="watch-page">

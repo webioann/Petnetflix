@@ -6,7 +6,6 @@ import './search-page.scss'
 async function SearchPage({params}: {params: {search_query: string}}) {
 
     const searching_results = await searchMovieAndTvshow(params.search_query)
-    // console.log("SEARCH ===> ",searching_results)
 
     return (
         <main className="search-page">

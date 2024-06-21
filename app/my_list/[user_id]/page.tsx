@@ -11,7 +11,7 @@ async function MyListPage({params}: myListPageParam) {
     const user_id = params.user_id
 
     const myListMovies = await getMyListMovies(user_id)
-    // console.log(myListMovies)
+    
     if(myListMovies) {
         return (
             <main className='my-list-page'>

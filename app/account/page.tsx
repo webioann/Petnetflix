@@ -4,7 +4,7 @@ import { UserContext } from '../../context/UserContext'
 import './account.scss'
 
 const Account_Page = () => {
-
+    // account page with moch data (only email is real)
     const { user } = useContext(UserContext)
 
     return (

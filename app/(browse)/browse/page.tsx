@@ -3,7 +3,7 @@ import MoviesSlider_Trending from "@/components/MoviesSliders/MoviesSlider_Trend
 import MoviesSlider_Discover from "@/components/MoviesSliders/MoviesSlider_Discover";
 
 function BrowsePage() {
-
+    // main (Home) page 
     return (
         <section style={{paddingBottom: '30px'}}>
             <Billboard media_type="movie"/>
