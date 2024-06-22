@@ -17,16 +17,3 @@ export default async function getTrailerVideoURL(media_type: IMediaType, movie_i
     return results[index]?.key
 };
 
-// let clip_key = '';
-// let teaser_key = '';
-// if(trailer_key) return trailer_key;
-// if(trailer_key === undefined) {
-//     const index = results.findIndex((element ) => element.type === 'Teaser')
-//     teaser_key = results[index]?.key
-//     if(teaser_key) return teaser_key;
-//     if(teaser_key === undefined) {
-//         const index = results.findIndex((element ) => element.type === 'Clip')
-//         clip_key = results[index]?.key
-//         return clip_key
-//     }
-// }
