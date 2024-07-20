@@ -1,6 +1,6 @@
 # Netflix clone movie app based on [TMDB API <img src='https://play-lh.googleusercontent.com/bBT7rPEvIr2tvzaXcoIdxeeFd8GNUbpWVl94tmiWOwrzwbjMwzDwyhNvAIl5t37u0c8' width='40px'/></h1>](https://developer.themoviedb.org/docs/getting-started "TMDB API website link")
 
- 🚀 **[THIS IS A LINK TO THE WORKING APP](https://petnetflix.vercel.app/)** 🚀
+ 🚀 **[THIS IS A LINK TO THE WORKING APP](https://petnetflix.vercel.app/ "Netfix clone app")** 🚀
 
 
 ![next](https://img.shields.io/badge/Next_JS-green.svg?style=flat&logo=react&logoColor=red)&nbsp;
