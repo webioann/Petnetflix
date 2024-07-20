@@ -1,4 +1,4 @@
-#Fullstack Netflix clone movie app based on [TMDB API <img src='https://play-lh.googleusercontent.com/bBT7rPEvIr2tvzaXcoIdxeeFd8GNUbpWVl94tmiWOwrzwbjMwzDwyhNvAIl5t37u0c8' width='40px'/></h1>](https://developer.themoviedb.org/docs/getting-started "TMDB API website link")
+# Fullstack Netflix clone movie app based on [TMDB API <img src='https://play-lh.googleusercontent.com/bBT7rPEvIr2tvzaXcoIdxeeFd8GNUbpWVl94tmiWOwrzwbjMwzDwyhNvAIl5t37u0c8' width='40px'/></h1>](https://developer.themoviedb.org/docs/getting-started "TMDB API website link")
 
  🚀 **[THIS IS A LINK TO THE WORKING APP](https://petnetflix.vercel.app/ "Link to my own Netfix clone website")** 🚀
 
